@@ -169,9 +169,9 @@ namespace ProjetG10 {
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(440, 22);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(183, 25);
+			this->label1->Size = System::Drawing::Size(195, 25);
 			this->label1->TabIndex = 4;
-			this->label1->Text = L"Gestion de Client ";
+			this->label1->Text = L"Gestion des clients";
 			// 
 			// button1
 			// 

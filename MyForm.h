@@ -189,11 +189,11 @@ namespace ProjetG10 {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label2->Location = System::Drawing::Point(334, 70);
+			this->label2->Location = System::Drawing::Point(348, 106);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(78, 16);
+			this->label2->Size = System::Drawing::Size(47, 16);
 			this->label2->TabIndex = 7;
-			this->label2->Text = L"TEAM EXIA";
+			this->label2->Text = L"MMZS";
 			this->label2->Click += gcnew System::EventHandler(this, &MyForm::label2_Click);
 			// 
 			// pictureBox1
