@@ -453,9 +453,9 @@ namespace ProjetG10 {
 
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ constring = "Data Source=(local);Initial Catalog=Groupe10;Integrated Security=True";
+		String^ constring = "Data Source=(local);Initial Catalog=G10BDD;Integrated Security=True";
 		SqlConnection^ condatabase = gcnew SqlConnection(constring);
-		if (textBox1->Text == "" && textBox2->Text == "" && textBox3->Text == "" && textBox4->Text == "" && textBox5->Text == "" && textBox6->Text == "") {
+		if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "" || textBox4->Text == "" || textBox5->Text == "" || textBox6->Text == "") {
 			MessageBox::Show("vous devez remplir tous les champs");
 		}
 		else {
@@ -463,8 +463,8 @@ namespace ProjetG10 {
 			String^ prenom = textBox2->Text;
 			String^ adresseL = textBox3->Text;
 			String^ adresseF = textBox4->Text;
-			String^ date = Convert::ToDateTime(textBox5->Text).ToString("dd-MM-yyyy");
-			String^ date2 = Convert::ToDateTime(textBox6->Text).ToString("dd-MM-yyyy");
+			String^ date = Convert::ToDateTime(textBox5->Text).ToString("yyyy-MM-dd");
+			String^ date2 = Convert::ToDateTime(textBox6->Text).ToString("yyyy-MM-dd");
 
 			SqlCommand^ cmdDataBase = gcnew SqlCommand("INSERT INTO Clients (Nom, Prenom, Date_de_naissance, Adresse_de_facturation, Adresse_de_livraison, premier_achat) values('" + nom + "','" + prenom + "','" + date + "','" + adresseF + "','" + adresseL + "','" + date2 + "');", condatabase);
 			SqlDataReader^ myReader1;
@@ -476,7 +476,7 @@ namespace ProjetG10 {
 				MessageBox::Show("client  enregistré");
 			}
 			catch (Exception^ ex) {
-				if (textBox1->Text == "" && textBox2->Text == "" && textBox3->Text == "" && textBox4->Text == "" && textBox5->Text == "" && textBox6->Text == "") {
+				if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "" || textBox4->Text == "" || textBox5->Text == "" || textBox6->Text == "") {
 					MessageBox::Show("vous devez remplir tous les champs");
 				}
 
@@ -494,7 +494,7 @@ namespace ProjetG10 {
 
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		String^ constring = "Data Source=(local);Initial Catalog=Groupe10;Integrated Security=True";
+		String^ constring = "Data Source=(local);Initial Catalog=G10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 
 		String^ ID = textBox7->Text;
@@ -523,7 +523,7 @@ namespace ProjetG10 {
 		String^ reference = textBox7->Text;
 		String^ nom = textBox1->Text;
 		String^ prenom = textBox2->Text;
-		String^ constring = "Data Source=(local);Initial Catalog=Groupe10;Integrated Security=True";
+		String^ constring = "Data Source=(local);Initial Catalog=G10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 
 		SqlCommand^ cmdDataBase = gcnew SqlCommand("SELECT * FROM Clients WHERE Numero_client = '" + reference + "' OR Nom = '"+nom+"' OR Prenom = '"+prenom+"' ", conDataBase);
@@ -557,7 +557,7 @@ namespace ProjetG10 {
 
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		String^ constring = "Data Source=(local);Initial Catalog=Groupe10;Integrated Security=True";
+		String^ constring = "Data Source=(local);Initial Catalog=G10BDD;Integrated Security=True";
 		SqlConnection^ condatabase = gcnew SqlConnection(constring);
 		String^ id = textBox7->Text;
 		String^ nom = textBox1->Text;
@@ -587,7 +587,7 @@ namespace ProjetG10 {
 
 
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ constring = "Data Source=(local);Initial Catalog=Groupe10;Integrated Security=True";
+		String^ constring = "Data Source=(local);Initial Catalog=G10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT * FROM Clients", conDataBase);
 		DataTable^ data = gcnew DataTable();
