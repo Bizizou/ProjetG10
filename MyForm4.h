@@ -158,9 +158,10 @@ namespace ProjetG10 {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(12, 100);
+			this->button1->Location = System::Drawing::Point(16, 123);
+			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(102, 40);
+			this->button1->Size = System::Drawing::Size(136, 49);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Ajouter";
 			this->button1->UseVisualStyleBackColor = true;
@@ -168,9 +169,10 @@ namespace ProjetG10 {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(12, 314);
+			this->button2->Location = System::Drawing::Point(16, 386);
+			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(102, 40);
+			this->button2->Size = System::Drawing::Size(136, 49);
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"Modifier";
 			this->button2->UseVisualStyleBackColor = true;
@@ -178,50 +180,57 @@ namespace ProjetG10 {
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(937, 100);
+			this->button3->Location = System::Drawing::Point(1249, 123);
+			this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(102, 40);
+			this->button3->Size = System::Drawing::Size(136, 49);
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"Afficher";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyForm4::button3_Click);
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(937, 314);
+			this->button4->Location = System::Drawing::Point(1249, 386);
+			this->button4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(102, 40);
+			this->button4->Size = System::Drawing::Size(136, 49);
 			this->button4->TabIndex = 3;
 			this->button4->Text = L"Supprimer";
 			this->button4->UseVisualStyleBackColor = true;
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(77, 455);
+			this->textBox1->Location = System::Drawing::Point(103, 560);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 20);
+			this->textBox1->Size = System::Drawing::Size(132, 22);
 			this->textBox1->TabIndex = 4;
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(74, 439);
+			this->label1->Location = System::Drawing::Point(99, 540);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(72, 13);
+			this->label1->Size = System::Drawing::Size(94, 17);
 			this->label1->TabIndex = 10;
 			this->label1->Text = L"Nom du client";
 			// 
 			// textBox7
 			// 
-			this->textBox7->Location = System::Drawing::Point(695, 455);
+			this->textBox7->Location = System::Drawing::Point(927, 560);
+			this->textBox7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(100, 20);
+			this->textBox7->Size = System::Drawing::Size(132, 22);
 			this->textBox7->TabIndex = 16;
 			// 
 			// button5
 			// 
-			this->button5->Location = System::Drawing::Point(434, 39);
+			this->button5->Location = System::Drawing::Point(579, 48);
+			this->button5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(177, 23);
+			this->button5->Size = System::Drawing::Size(236, 28);
 			this->button5->TabIndex = 17;
 			this->button5->Text = L"Afficher toutes les commandes";
 			this->button5->UseVisualStyleBackColor = true;
@@ -230,185 +239,209 @@ namespace ProjetG10 {
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(144, 100);
+			this->dataGridView1->Location = System::Drawing::Point(192, 123);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(776, 254);
+			this->dataGridView1->RowHeadersWidth = 51;
+			this->dataGridView1->Size = System::Drawing::Size(1035, 313);
 			this->dataGridView1->TabIndex = 18;
 			// 
 			// dataGridView2
 			// 
 			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView2->Location = System::Drawing::Point(144, 100);
+			this->dataGridView2->Location = System::Drawing::Point(192, 123);
+			this->dataGridView2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->dataGridView2->Name = L"dataGridView2";
-			this->dataGridView2->Size = System::Drawing::Size(776, 254);
+			this->dataGridView2->RowHeadersWidth = 51;
+			this->dataGridView2->Size = System::Drawing::Size(1035, 313);
 			this->dataGridView2->TabIndex = 19;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(165, 455);
+			this->textBox2->Location = System::Drawing::Point(220, 560);
+			this->textBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(100, 20);
+			this->textBox2->Size = System::Drawing::Size(132, 22);
 			this->textBox2->TabIndex = 5;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(271, 455);
+			this->textBox3->Location = System::Drawing::Point(361, 560);
+			this->textBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(100, 20);
+			this->textBox3->Size = System::Drawing::Size(132, 22);
 			this->textBox3->TabIndex = 6;
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(483, 455);
+			this->textBox5->Location = System::Drawing::Point(644, 560);
+			this->textBox5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(100, 20);
+			this->textBox5->Size = System::Drawing::Size(132, 22);
 			this->textBox5->TabIndex = 8;
 			// 
 			// textBox6
 			// 
-			this->textBox6->Location = System::Drawing::Point(589, 455);
+			this->textBox6->Location = System::Drawing::Point(785, 560);
+			this->textBox6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(100, 20);
+			this->textBox6->Size = System::Drawing::Size(132, 22);
 			this->textBox6->TabIndex = 9;
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(179, 439);
+			this->label2->Location = System::Drawing::Point(239, 540);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(86, 13);
+			this->label2->Size = System::Drawing::Size(114, 17);
 			this->label2->TabIndex = 11;
 			this->label2->Text = L"Prenom du client";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(387, 439);
+			this->label3->Location = System::Drawing::Point(516, 540);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(79, 13);
+			this->label3->Size = System::Drawing::Size(105, 17);
 			this->label3->TabIndex = 12;
 			this->label3->Text = L"Nom de l\'article";
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(497, 439);
+			this->label5->Location = System::Drawing::Point(663, 540);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(86, 13);
+			this->label5->Size = System::Drawing::Size(114, 17);
 			this->label5->TabIndex = 14;
 			this->label5->Text = L"Date de livraison";
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(608, 439);
+			this->label6->Location = System::Drawing::Point(811, 540);
+			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(81, 13);
+			this->label6->Size = System::Drawing::Size(108, 17);
 			this->label6->TabIndex = 15;
 			this->label6->Text = L"Date d\'emission";
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(377, 455);
+			this->textBox4->Location = System::Drawing::Point(503, 560);
+			this->textBox4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(100, 20);
+			this->textBox4->Size = System::Drawing::Size(132, 22);
 			this->textBox4->TabIndex = 20;
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(297, 439);
+			this->label4->Location = System::Drawing::Point(396, 540);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(50, 13);
+			this->label4->Size = System::Drawing::Size(66, 17);
 			this->label4->TabIndex = 21;
 			this->label4->Text = L"Quantité ";
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(704, 439);
+			this->label7->Location = System::Drawing::Point(939, 540);
+			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(91, 13);
+			this->label7->Size = System::Drawing::Size(120, 17);
 			this->label7->TabIndex = 22;
 			this->label7->Text = L"Date de paiement";
 			// 
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(801, 439);
+			this->label8->Location = System::Drawing::Point(1068, 540);
+			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(100, 13);
+			this->label8->Size = System::Drawing::Size(132, 17);
 			this->label8->TabIndex = 23;
 			this->label8->Text = L"Moyen de paiement";
 			// 
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(836, 407);
+			this->label9->Location = System::Drawing::Point(1115, 501);
+			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(0, 13);
+			this->label9->Size = System::Drawing::Size(0, 17);
 			this->label9->TabIndex = 24;
 			// 
 			// textBox8
 			// 
-			this->textBox8->Location = System::Drawing::Point(801, 455);
+			this->textBox8->Location = System::Drawing::Point(1068, 560);
+			this->textBox8->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(100, 20);
+			this->textBox8->Size = System::Drawing::Size(132, 22);
 			this->textBox8->TabIndex = 27;
 			// 
 			// textBox9
 			// 
-			this->textBox9->Location = System::Drawing::Point(939, 67);
+			this->textBox9->Location = System::Drawing::Point(1252, 82);
+			this->textBox9->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(100, 20);
+			this->textBox9->Size = System::Drawing::Size(132, 22);
 			this->textBox9->TabIndex = 28;
 			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(962, 51);
+			this->label10->Location = System::Drawing::Point(1283, 63);
+			this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(57, 13);
+			this->label10->Size = System::Drawing::Size(74, 17);
 			this->label10->TabIndex = 29;
 			this->label10->Text = L"Reference";
 			// 
 			// textBox10
 			// 
-			this->textBox10->Location = System::Drawing::Point(377, 519);
+			this->textBox10->Location = System::Drawing::Point(503, 639);
+			this->textBox10->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox10->Name = L"textBox10";
-			this->textBox10->Size = System::Drawing::Size(100, 20);
+			this->textBox10->Size = System::Drawing::Size(132, 22);
 			this->textBox10->TabIndex = 30;
 			// 
 			// textBox11
 			// 
-			this->textBox11->Location = System::Drawing::Point(483, 519);
+			this->textBox11->Location = System::Drawing::Point(644, 639);
+			this->textBox11->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(100, 20);
+			this->textBox11->Size = System::Drawing::Size(132, 22);
 			this->textBox11->TabIndex = 31;
 			// 
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(407, 498);
+			this->label11->Location = System::Drawing::Point(543, 613);
+			this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(74, 13);
+			this->label11->Size = System::Drawing::Size(97, 17);
 			this->label11->TabIndex = 32;
 			this->label11->Text = L"Referencetest";
 			// 
 			// label12
 			// 
 			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(513, 498);
+			this->label12->Location = System::Drawing::Point(684, 613);
+			this->label12->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(42, 13);
+			this->label12->Size = System::Drawing::Size(55, 17);
 			this->label12->TabIndex = 33;
 			this->label12->Text = L"Remise";
 			// 
 			// MyForm4
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1061, 551);
+			this->ClientSize = System::Drawing::Size(1415, 678);
 			this->Controls->Add(this->label12);
 			this->Controls->Add(this->label11);
 			this->Controls->Add(this->textBox11);
@@ -439,6 +472,7 @@ namespace ProjetG10 {
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"MyForm4";
 			this->Text = L"MyForm4";
 			this->Load += gcnew System::EventHandler(this, &MyForm4::MyForm4_Load);
@@ -454,7 +488,7 @@ namespace ProjetG10 {
 	private: System::Void MyForm4_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ constring = "Data Source=(local);Initial Catalog=G10BDD;Integrated Security=True";
+		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 
 		if (textBox1->Text == "" && textBox2->Text == "" && textBox3->Text == "" && textBox4->Text == "" && textBox5->Text == "" && textBox6->Text == "") {
@@ -491,7 +525,7 @@ namespace ProjetG10 {
 		}
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ constring = "Data Source=(local);Initial Catalog=G10BDD;Integrated Security=True";
+		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 
 		String^ nom_client = textBox1->Text;
@@ -521,7 +555,7 @@ namespace ProjetG10 {
 		}
 	}
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ constring = "Data Source=(local);Initial Catalog=G10BDD;Integrated Security=True";
+		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT * FROM Commandes", conDataBase);
 		DataTable^ data = gcnew DataTable();
@@ -533,6 +567,8 @@ namespace ProjetG10 {
 		
 	}
 
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
 
