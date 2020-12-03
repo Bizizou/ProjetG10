@@ -84,6 +84,10 @@ namespace ProjetG10 {
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Button^ button7;
+	private: System::Windows::Forms::ComboBox^ comboBox1;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::ComboBox^ comboBox2;
+	private: System::Windows::Forms::Label^ label10;
 
 	private: System::ComponentModel::IContainer^ components;
 
@@ -156,6 +160,10 @@ namespace ProjetG10 {
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->label10 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
@@ -190,7 +198,7 @@ namespace ProjetG10 {
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label3->Location = System::Drawing::Point(119, 428);
+			this->label3->Location = System::Drawing::Point(153, 407);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(34, 15);
 			this->label3->TabIndex = 8;
@@ -203,7 +211,7 @@ namespace ProjetG10 {
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label4->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label4->Location = System::Drawing::Point(867, 428);
+			this->label4->Location = System::Drawing::Point(846, 406);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(129, 15);
 			this->label4->TabIndex = 10;
@@ -216,7 +224,7 @@ namespace ProjetG10 {
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label5->Location = System::Drawing::Point(391, 428);
+			this->label5->Location = System::Drawing::Point(365, 407);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(103, 15);
 			this->label5->TabIndex = 12;
@@ -229,7 +237,7 @@ namespace ProjetG10 {
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label6->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label6->Location = System::Drawing::Point(536, 428);
+			this->label6->Location = System::Drawing::Point(533, 407);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(135, 15);
 			this->label6->TabIndex = 14;
@@ -243,7 +251,7 @@ namespace ProjetG10 {
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label7->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label7->Location = System::Drawing::Point(710, 428);
+			this->label7->Location = System::Drawing::Point(698, 407);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(114, 15);
 			this->label7->TabIndex = 16;
@@ -256,7 +264,7 @@ namespace ProjetG10 {
 			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label8->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label8->Location = System::Drawing::Point(260, 428);
+			this->label8->Location = System::Drawing::Point(240, 407);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(51, 15);
 			this->label8->TabIndex = 18;
@@ -303,42 +311,42 @@ namespace ProjetG10 {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(64, 446);
+			this->textBox1->Location = System::Drawing::Point(126, 424);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(142, 20);
+			this->textBox1->Size = System::Drawing::Size(86, 20);
 			this->textBox1->TabIndex = 27;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(212, 446);
+			this->textBox2->Location = System::Drawing::Point(218, 424);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(142, 20);
+			this->textBox2->Size = System::Drawing::Size(101, 20);
 			this->textBox2->TabIndex = 28;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(369, 446);
+			this->textBox3->Location = System::Drawing::Point(337, 424);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(142, 20);
+			this->textBox3->Size = System::Drawing::Size(161, 20);
 			this->textBox3->TabIndex = 29;
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(526, 446);
+			this->textBox4->Location = System::Drawing::Point(518, 425);
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(161, 20);
 			this->textBox4->TabIndex = 30;
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(693, 446);
+			this->textBox5->Location = System::Drawing::Point(685, 424);
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(142, 20);
 			this->textBox5->TabIndex = 31;
 			// 
 			// textBox6
 			// 
-			this->textBox6->Location = System::Drawing::Point(860, 446);
+			this->textBox6->Location = System::Drawing::Point(833, 424);
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(142, 20);
 			this->textBox6->TabIndex = 32;
@@ -375,13 +383,13 @@ namespace ProjetG10 {
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(132, 23);
 			this->button5->TabIndex = 36;
-			this->button5->Text = L"afficher tous les clients ";
+			this->button5->Text = L"Afficher tous les clients ";
 			this->button5->UseVisualStyleBackColor = true;
 			this->button5->Click += gcnew System::EventHandler(this, &MyForm1::button5_Click);
 			// 
 			// button6
 			// 
-			this->button6->Location = System::Drawing::Point(477, 516);
+			this->button6->Location = System::Drawing::Point(476, 505);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(75, 23);
 			this->button6->TabIndex = 37;
@@ -399,12 +407,66 @@ namespace ProjetG10 {
 			this->button7->UseVisualStyleBackColor = true;
 			this->button7->Click += gcnew System::EventHandler(this, &MyForm1::button7_Click_1);
 			// 
+			// comboBox1
+			// 
+			this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(38) {
+				L"", L"ALGER", L"ORAN", L"CONSTANTINE", L"ANNABA",
+					L"BLIDA", L"BATNA", L"DJELFA", L"SETIF", L"SIDI BEL ABBES", L"BISKRA", L"TEBESSA", L"ELOUED", L"SKIKDA", L"TIARET", L"BEJAIA",
+					L"TLEMCEN", L"OUARGLA", L"BECHAR", L"MOSTAGANEM", L"BORDJ BOU ARRERIDJ", L"CHLEF", L"SOUK AHRAS", L"MEDEA", L"ELEULMA", L"TOUGGOURT",
+					L"GHARDAIA", L"SAIDA", L"LAGHOUAT", L"MSILA", L"JIJEL", L"RELIZANE", L"GUELMA", L"AINBEIDA", L"KHENCHELA", L"BOUSAADA", L"MASCARA",
+					L"TIZI OUZOU"
+			});
+			this->comboBox1->Location = System::Drawing::Point(357, 468);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(121, 21);
+			this->comboBox1->TabIndex = 39;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(377, 452);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(65, 13);
+			this->label9->TabIndex = 40;
+			this->label9->Text = L"Ville associé";
+			// 
+			// comboBox2
+			// 
+			this->comboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(38) {
+				L"", L"ALGER", L"ORAN", L"CONSTANTINE", L"ANNABA",
+					L"BLIDA", L"BATNA", L"DJELFA", L"SETIF", L"SIDI BEL ABBES", L"BISKRA", L"TEBESSA", L"ELOUED", L"SKIKDA", L"TIARET", L"BEJAIA",
+					L"TLEMCEN", L"OUARGLA", L"BECHAR", L"MOSTAGANEM", L"BORDJ BOU ARRERIDJ", L"CHLEF", L"SOUK AHRAS", L"MEDEA", L"ELEULMA", L"TOUGGOURT",
+					L"GHARDAIA", L"SAIDA", L"LAGHOUAT", L"MSILA", L"JIJEL", L"RELIZANE", L"GUELMA", L"AINBEIDA", L"KHENCHELA", L"BOUSAADA", L"MASCARA",
+					L"TIZI OUZOU"
+			});
+			this->comboBox2->Location = System::Drawing::Point(537, 468);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(121, 21);
+			this->comboBox2->TabIndex = 41;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(564, 452);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(66, 13);
+			this->label10->TabIndex = 42;
+			this->label10->Text = L"Ville Associé";
+			// 
 			// MyForm1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1061, 551);
+			this->Controls->Add(this->label10);
+			this->Controls->Add(this->comboBox2);
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->button7);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button5);
@@ -461,12 +523,14 @@ namespace ProjetG10 {
 		else {
 			String^ nom = textBox1->Text;
 			String^ prenom = textBox2->Text;
-			String^ adresseL = textBox3->Text;
-			String^ adresseF = textBox4->Text;
-			String^ date = Convert::ToDateTime(textBox5->Text).ToString("yyyy-MM-dd");
-			String^ date2 = Convert::ToDateTime(textBox6->Text).ToString("yyyy-MM-dd");
+			String^ adresse_livraison = textBox3->Text;
+			String^ adresse_facture = textBox4->Text;
+			String^ date_naissance = Convert::ToDateTime(textBox5->Text).ToString("yyyy-MM-dd");
+			String^ date_achat = Convert::ToDateTime(textBox6->Text).ToString("yyyy-MM-dd");
+			String^ ville_livraison = comboBox1->Text;
+			String^ ville_facture= comboBox2->Text;
 
-			SqlCommand^ cmdDataBase = gcnew SqlCommand("INSERT INTO Clients (Nom, Prenom, Date_de_naissance, Adresse_de_facturation, Adresse_de_livraison, premier_achat) values('" + nom + "','" + prenom + "','" + date + "','" + adresseF + "','" + adresseL + "','" + date2 + "');", condatabase);
+			SqlCommand^ cmdDataBase = gcnew SqlCommand("INSERT INTO Clients (Nom, Prenom, Date_de_naissance, Adresse_de_facturation, Adresse_de_livraison, premier_achat) values('" + nom + "','" + prenom + "','" + date_naissance + "','"+ville_facture+"," + adresse_facture + "','"+ville_livraison+"," + adresse_livraison + "','" + date_achat + "');", condatabase);
 			SqlDataReader^ myReader1;
 
 
@@ -502,18 +566,9 @@ namespace ProjetG10 {
 
 		conDataBase->Open();
 		SqlDataReader^ myReader = cmdDataBase->ExecuteReader();
-		MessageBox::Show("Client supprimé");
+		MessageBox::Show("Le client a été supprimé ");
 		conDataBase->Close();
 	}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -549,12 +604,6 @@ namespace ProjetG10 {
 		dataGridView2->DataSource = bindingSource2;
 
 	}
-
-
-
-
-
-
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
@@ -562,17 +611,19 @@ namespace ProjetG10 {
 		String^ id = textBox7->Text;
 		String^ nom = textBox1->Text;
 		String^ prenom = textBox2->Text;
-		String^ adresseL = textBox3->Text;
-		String^ adresseF = textBox4->Text;
-		String^ date = Convert::ToDateTime(textBox5->Text).ToString("dd-MM-yyyy");
-		String^ date2 = Convert::ToDateTime(textBox6->Text).ToString("dd-MM-yyyy");
+		String^ adresse_livraison = textBox3->Text;
+		String^ adresse_facture = textBox4->Text;
+		String^ date_naissance = Convert::ToDateTime(textBox5->Text).ToString("dd-MM-yyyy");
+		String^ date_achat = Convert::ToDateTime(textBox6->Text).ToString("dd-MM-yyyy");
+		String^ ville_livraison = comboBox1->Text;
+		String^ ville_facture = comboBox2->Text;
 
-		SqlCommand^ cmdDataBase = gcnew SqlCommand("UPDATE Clients SET  Nom = '" + nom + "', Prenom ='" + prenom + "' , Date_de_naissance = '" + date + "' , premier_achat = '" + date2 + "', Adresse_de_livraison = '" + adresseL + "', Adresse_de_facturation = '" + adresseF + "' WHERE Numero_client = " + id + " ;", condatabase);
+		SqlCommand^ cmdDataBase = gcnew SqlCommand("UPDATE Clients SET  Nom = '" + nom + "', Prenom ='" + prenom + "' , Date_de_naissance = '" + date_naissance + "' , premier_achat = '" + date_achat + "', Adresse_de_livraison = '"+ville_livraison+"" + adresse_livraison + "', Adresse_de_facturation = '"+ville_facture+"" +adresse_facture+ "' WHERE Numero_client = " + id + " ;", condatabase);
 		SqlDataReader^ myReader;
 		try {
 			condatabase->Open();
 			myReader = cmdDataBase->ExecuteReader();
-			MessageBox::Show("client modifié avec succés");
+			MessageBox::Show("Le client a été modifié");
 		}
 		catch (Exception^ ex) {
 			MessageBox::Show(ex->Message);
@@ -605,6 +656,8 @@ namespace ProjetG10 {
 		textBox5->Text = "";
 		textBox6->Text = "";
 		textBox7->Text = "";
+		comboBox1->Text = "";
+		comboBox2->Text = "";
 
 	}
 

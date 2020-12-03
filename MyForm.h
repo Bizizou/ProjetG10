@@ -118,7 +118,7 @@ namespace ProjetG10 {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(141, 71);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"Gestion de Client";
+			this->button1->Text = L"Gestion des clients";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
@@ -148,7 +148,7 @@ namespace ProjetG10 {
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(156, 80);
 			this->button3->TabIndex = 2;
-			this->button3->Text = L"Gestion du stock";
+			this->button3->Text = L"Gestion des articles";
 			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
 			// 

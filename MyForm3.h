@@ -82,6 +82,8 @@ namespace ProjetG10 {
 	private: System::Windows::Forms::TextBox^ textBox9;
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Button^ button7;
+	private: System::Windows::Forms::TextBox^ textBox10;
+	private: System::Windows::Forms::Label^ label11;
 	private: System::ComponentModel::IContainer^ components;
 
 	protected:
@@ -133,6 +135,8 @@ namespace ProjetG10 {
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
+			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->label11 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
@@ -421,11 +425,33 @@ namespace ProjetG10 {
 			this->button7->UseVisualStyleBackColor = true;
 			this->button7->Click += gcnew System::EventHandler(this, &MyForm3::button7_Click);
 			// 
+			// textBox10
+			// 
+			this->textBox10->Location = System::Drawing::Point(918, 74);
+			this->textBox10->Name = L"textBox10";
+			this->textBox10->Size = System::Drawing::Size(131, 20);
+			this->textBox10->TabIndex = 64;
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->BackColor = System::Drawing::SystemColors::Info;
+			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label11->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
+			this->label11->Location = System::Drawing::Point(948, 54);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(68, 17);
+			this->label11->TabIndex = 65;
+			this->label11->Text = L"ID_Article";
+			// 
 			// MyForm3
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1061, 551);
+			this->Controls->Add(this->label11);
+			this->Controls->Add(this->textBox10);
 			this->Controls->Add(this->button7);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->textBox9);
@@ -516,9 +542,10 @@ namespace ProjetG10 {
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ reference = textBox1->Text;
+		String^ ID = textBox10->Text;
 		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
-		SqlCommand^ cmdDataBase = gcnew SqlCommand("SELECT * FROM Article WHERE Reference = '"+reference+"' ", conDataBase);
+		SqlCommand^ cmdDataBase = gcnew SqlCommand("SELECT * FROM Article WHERE ID_Article = '"+ID+"' ", conDataBase);
 		conDataBase->Open();
 		SqlDataReader^ myReader = cmdDataBase->ExecuteReader();
 
@@ -526,7 +553,7 @@ namespace ProjetG10 {
 		dataGridView2->Show();
 
 		while (myReader->Read()) {
-			
+			textBox1->Text = myReader->GetString(1);
 			textBox2->Text = myReader->GetString(2);
 			textBox3->Text = Convert::ToString(myReader->GetInt32(3));
 			textBox4->Text = Convert::ToString(myReader->GetDouble(4));
@@ -538,7 +565,7 @@ namespace ProjetG10 {
 		}
 
 		myReader->Close();
-		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT * FROM Article WHERE Reference = '" + reference + "' ", conDataBase);
+		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT * FROM Article WHERE ID_Article = '" + ID + "' ", conDataBase);
 		DataTable^ data = gcnew DataTable();
 		data->Clear();
 		adapter->Fill(data);
@@ -559,8 +586,9 @@ namespace ProjetG10 {
 		String^ nature_article = textBox7->Text;
 		String^ couleur_article = textBox8->Text;
 		int seuil = Int32::Parse(textBox9->Text);
+		String^ ID = textBox10->Text;
 
-		SqlCommand^ cmdDataBase = gcnew SqlCommand("UPDATE Article SET designation = '" + designation + "',  Quantite = " + quantite + ", Montant_HT = " + montant_ht + ", Montant_TVA = " + montant_tva + ", Montant_TTC = " + montant_ttc + ", Seuil_de_reapprovisionnement = " + seuil + ", Nature_de_l_article = '" + nature_article + "', Couleur_de_l_article = '" + couleur_article + "' WHERE Reference = '" + reference + "' ", conDataBase);
+		SqlCommand^ cmdDataBase = gcnew SqlCommand("UPDATE Article SET Reference = '"+ reference +"' ,designation = '" + designation + "',  Quantite = " + quantite + ", Montant_HT = " + montant_ht + ", Montant_TVA = " + montant_tva + ", Montant_TTC = " + montant_ttc + ", Seuil_de_reapprovisionnement = " + seuil + ", Nature_de_l_article = '" + nature_article + "', Couleur_de_l_article = '" + couleur_article + "' WHERE ID_Article = '" + ID + "' ", conDataBase);
 		SqlDataReader^ myReader;
 		try {
 
