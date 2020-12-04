@@ -10,15 +10,18 @@ private:
 	System::String^ Adresse_de_facturation;
 	System::String^ Adresse_de_livraison;
 	System::String^ premier_achat;
+	System::String^ ID;
 
 public:
-	Client(System::String^, System::String^,System::String^,System::String^,System::String^,System::String^);
+	Client(System::String^,System::String^, System::String^,System::String^,System::String^,System::String^,System::String^);
 	Client();
 	System::String^ Afficher();
 	System::String^ Modifier();
 	System::String^ Ajouter();
 	System::String^ Supprimer();
 	System::String^ getNom();
+	void setID(System::String^);
+	System::String^ getID();
 	void setNom(System::String^);
 	System::String^ getPrenom();
 	void setPrenom(System::String^);

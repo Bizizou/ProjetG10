@@ -467,7 +467,7 @@ namespace ProjetG10 {
 			String^ date = Convert::ToDateTime(textBox5->Text).ToString("yyyy-MM-dd");
 			String^ date2 = Convert::ToDateTime(textBox6->Text).ToString("yyyy-MM-dd");
 
-			SqlCommand^ cmdDataBase = gcnew SqlCommand("INSERT INTO Clients (Nom, Prenom, Date_de_naissance, Adresse_de_facturation, Adresse_de_livraison, premier_achat) values('" + nom + "','" + prenom + "','" + date + "','" + adresseF + "','" + adresseL + "','" + date2 + "');", condatabase);
+			SqlCommand^ cmdDataBase = gcnew SqlCommand(, condatabase);
 			SqlDataReader^ myReader1;
 
 
@@ -528,7 +528,7 @@ namespace ProjetG10 {
 		
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 
-		SqlCommand^ cmdDataBase = gcnew SqlCommand (a->Afficher());
+		SqlCommand^ cmdDataBase = gcnew SqlCommand (a->Afficher(),conDataBase);
 		conDataBase->Open();
 		SqlDataReader^ myReader = cmdDataBase->ExecuteReader();
 		dataGridView1->Hide();
@@ -543,7 +543,7 @@ namespace ProjetG10 {
 			textBox6->Text = Convert::ToString(myReader->GetDateTime(6).ToString("dd-MM-yyyy"));
 		}
 		myReader->Close();
-		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT * FROM Clients WHERE Numero_client = '" + reference + "' OR Nom = '" + nom + "' OR Prenom = '" + prenom + "' ", conDataBase);
+		SqlDataAdapter^ adapter = gcnew SqlDataAdapter(a->Afficher(), conDataBase);
 		DataTable^ data = gcnew DataTable();
 		data->Clear();
 		adapter->Fill(data);
@@ -558,6 +558,7 @@ namespace ProjetG10 {
 
 
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		Client^ b = gcnew Client();
 
 		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
 		SqlConnection^ condatabase = gcnew SqlConnection(constring);
@@ -569,7 +570,7 @@ namespace ProjetG10 {
 		String^ date = Convert::ToDateTime(textBox5->Text).ToString("dd-MM-yyyy");
 		String^ date2 = Convert::ToDateTime(textBox6->Text).ToString("dd-MM-yyyy");
 
-		SqlCommand^ cmdDataBase = gcnew SqlCommand("UPDATE Clients SET  Nom = '" + nom + "', Prenom ='" + prenom + "' , Date_de_naissance = '" + date + "' , premier_achat = '" + date2 + "', Adresse_de_livraison = '" + adresseL + "', Adresse_de_facturation = '" + adresseF + "' WHERE Numero_client = " + id + " ;", condatabase);
+		SqlCommand^ cmdDataBase = gcnew SqlCommand(b->Modifier(), condatabase);
 		SqlDataReader^ myReader;
 		try {
 			condatabase->Open();
