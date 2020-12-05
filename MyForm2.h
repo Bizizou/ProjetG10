@@ -1,4 +1,6 @@
 #pragma once
+#include "gestion_personnel.h"
+
 using namespace System::Data::SqlClient;
 
 namespace ProjetG10 {
@@ -78,12 +80,13 @@ namespace ProjetG10 {
 	private: System::Windows::Forms::TextBox^ textBox5;
 
 	private: System::Windows::Forms::Label^ label10;
-	private: System::Windows::Forms::TextBox^ textBox8;
+
 
 	private: System::Windows::Forms::BindingSource^ bindingSource1;
 	private: System::Windows::Forms::BindingSource^ bindingSource2;
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Button^ button7;
+	private: System::Windows::Forms::TextBox^ textBox6;
 	private: System::ComponentModel::IContainer^ components;
 
 
@@ -135,11 +138,11 @@ namespace ProjetG10 {
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
 			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->bindingSource2 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
@@ -193,14 +196,14 @@ namespace ProjetG10 {
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(712, 394);
+			this->textBox4->Location = System::Drawing::Point(537, 394);
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(152, 20);
 			this->textBox4->TabIndex = 52;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(534, 394);
+			this->textBox3->Location = System::Drawing::Point(717, 394);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(153, 20);
 			this->textBox3->TabIndex = 51;
@@ -235,11 +238,11 @@ namespace ProjetG10 {
 			// 
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(939, 100);
+			this->button3->Location = System::Drawing::Point(26, 100);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(99, 30);
 			this->button3->TabIndex = 47;
-			this->button3->Text = L"Afficher";
+			this->button3->Text = L"Ajouter";
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &MyForm2::button3_Click);
 			// 
@@ -247,11 +250,11 @@ namespace ProjetG10 {
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(939, 324);
+			this->button2->Location = System::Drawing::Point(469, 509);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(99, 30);
 			this->button2->TabIndex = 46;
-			this->button2->Text = L"Supprimer";
+			this->button2->Text = L"Tout effacer";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm2::button2_Click);
 			// 
@@ -303,7 +306,7 @@ namespace ProjetG10 {
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label6->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label6->Location = System::Drawing::Point(737, 376);
+			this->label6->Location = System::Drawing::Point(742, 378);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(110, 13);
 			this->label6->TabIndex = 42;
@@ -317,7 +320,7 @@ namespace ProjetG10 {
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label5->Location = System::Drawing::Point(549, 376);
+			this->label5->Location = System::Drawing::Point(552, 376);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(129, 13);
 			this->label5->TabIndex = 41;
@@ -352,11 +355,11 @@ namespace ProjetG10 {
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(26, 100);
+			this->button1->Location = System::Drawing::Point(437, 68);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(99, 30);
+			this->button1->Size = System::Drawing::Size(181, 30);
 			this->button1->TabIndex = 37;
-			this->button1->Text = L"Ajouter ";
+			this->button1->Text = L"Afficher les personnels";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm2::button1_Click);
 			// 
@@ -364,11 +367,11 @@ namespace ProjetG10 {
 			// 
 			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button5->Location = System::Drawing::Point(436, 71);
+			this->button5->Location = System::Drawing::Point(939, 324);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(177, 23);
+			this->button5->Size = System::Drawing::Size(99, 23);
 			this->button5->TabIndex = 58;
-			this->button5->Text = L"Afficher les personnels ";
+			this->button5->Text = L"Supprimer";
 			this->button5->UseVisualStyleBackColor = true;
 			this->button5->Click += gcnew System::EventHandler(this, &MyForm2::button5_Click);
 			// 
@@ -444,22 +447,15 @@ namespace ProjetG10 {
 			this->label10->TabIndex = 67;
 			this->label10->Text = L"Prenom de l\'encadreur";
 			// 
-			// textBox8
-			// 
-			this->textBox8->Location = System::Drawing::Point(565, 483);
-			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(152, 20);
-			this->textBox8->TabIndex = 68;
-			// 
 			// button6
 			// 
 			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button6->Location = System::Drawing::Point(476, 516);
+			this->button6->Location = System::Drawing::Point(939, 100);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(92, 23);
 			this->button6->TabIndex = 71;
-			this->button6->Text = L"Tout effacer";
+			this->button6->Text = L"Afficher";
 			this->button6->UseVisualStyleBackColor = true;
 			this->button6->Click += gcnew System::EventHandler(this, &MyForm2::button6_Click);
 			// 
@@ -475,18 +471,25 @@ namespace ProjetG10 {
 			this->button7->UseVisualStyleBackColor = true;
 			this->button7->Click += gcnew System::EventHandler(this, &MyForm2::button7_Click);
 			// 
+			// textBox6
+			// 
+			this->textBox6->Location = System::Drawing::Point(555, 483);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(153, 20);
+			this->textBox6->TabIndex = 73;
+			// 
 			// MyForm2
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::SeaShell;
 			this->ClientSize = System::Drawing::Size(1061, 551);
+			this->Controls->Add(this->textBox6);
 			this->Controls->Add(this->label9);
 			this->Controls->Add(this->button7);
 			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->label10);
-			this->Controls->Add(this->textBox8);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->radioButton2);
 			this->Controls->Add(this->radioButton1);
@@ -522,56 +525,13 @@ namespace ProjetG10 {
 #pragma endregion
 	private: System::Void Personnel_Load(System::Object^ sender, System::EventArgs^ e) {
 		textBox5->Hide();
-		textBox8->Hide();
+		textBox6->Hide();
 		label9->Hide();
 		label10->Hide();
 	}
 	private: System::Void MyForm2_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
-		SqlConnection^ condatabase = gcnew SqlConnection(constring);
-
-		if (textBox1->Text == "" && textBox2->Text == "" && textBox3->Text == "" && textBox4->Text == "" && textBox5->Text == "" && textBox8->Text == "") {
-			MessageBox::Show("vous devez remplir tous les champs");
-		}
-		else {
-			String^ nom_personnel = textBox1->Text;
-			String^ prenom_personnel = textBox2->Text;
-			String^ adresse_personnel = textBox3->Text;
-			String^ date_embauche = Convert::ToDateTime(textBox4->Text).ToString("yyyy-MM-dd");
-			String^ nom_encadreur = textBox5->Text;
-			String^ prenom_encadreur = textBox8->Text;
-
-			SqlCommand^ cmdDataBase = gcnew SqlCommand("INSERT INTO  Le_personnel (Nom, Prenom , Adresse , Date_d_embauche, ID_Le_personnel ) values('" + nom_personnel + "','" + prenom_personnel + "','" + adresse_personnel + "','" + date_embauche + "',(SELECT ID FROM Le_personnel WHERE Nom='" + nom_encadreur + "' AND Prenom='" + prenom_encadreur + "'));", condatabase);
-			SqlDataReader^ myReader;
-			try {
-				condatabase->Open();
-				myReader = cmdDataBase->ExecuteReader();
-				MessageBox::Show("client enregistré avec succés");
-			}
-			catch (Exception^ ex) {
-				MessageBox::Show(ex->Message);
-			}
-		}
-
-
-	}
-	private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-		textBox5->Show();
-		textBox8->Show();
-		label9->Show();
-		label10->Show();
-	}
-	private: System::Void groupBox2_Enter(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-		textBox5->Hide();
-		textBox8->Hide();
-		label9->Hide();
-		label10->Hide();
-	}
-	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT * FROM Le_personnel", conDataBase);
@@ -582,84 +542,185 @@ namespace ProjetG10 {
 		bindingSource1->DataSource = data;
 		dataGridView1->DataSource = bindingSource1;
 	}
-	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
-		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
-
-		String^ nom_personnel = textBox1->Text;
-		String^ prenom_personnel = textBox2->Text;
-		String^ adresse_personnel = textBox3->Text;
-		String^ date_embauche = Convert::ToDateTime(textBox4->Text).ToString("dd-MM-yyyy");
-		String^ nom_encadreur = textBox5->Text;
-		String^ prenom_encadreur = textBox8->Text;
-		String^ ID = textBox7->Text;
-
-
-		SqlCommand^ cmdDataBase = gcnew SqlCommand("UPDATE Le_personnel SET  Nom = '" + nom_personnel + "', Prenom ='" + prenom_personnel + "' , Adresse = '" + adresse_personnel + "', Date_d_embauche = '" + date_embauche + "' , ID_Le_personnel=(SELECT ID FROM Le_personnel WHERE Nom='" + nom_encadreur + "' AND Prenom='" + prenom_encadreur + "') WHERE ID = " + ID + " ;", conDataBase);
-
-		SqlDataReader^ myReader;
-		try {
-			conDataBase->Open();
-			myReader = cmdDataBase->ExecuteReader();
-
-			MessageBox::Show("client modifié avec succés");
-			conDataBase->Close();
-		}
-		catch (Exception^ ex) {
-			MessageBox::Show(ex->Message);
-		}
-	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ ID = textBox7->Text;
 		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 
-		SqlCommand^ cmdDataBase = gcnew SqlCommand("SELECT * FROM Le_personnel WHERE ID = '" + ID + "' ", conDataBase);
-		conDataBase->Open();
-		SqlDataReader^ myReader = cmdDataBase->ExecuteReader();
-		dataGridView1->Hide();
-		dataGridView2->Show();
+		if (textBox1->Text != "" && textBox2->Text != "" && textBox3->Text != "" && textBox4->Text != "") {
+			if (textBox5->Text != "" && textBox6->Text != "") {
 
-		while (myReader->Read()) {
-			textBox1->Text = myReader->GetString(1);
-			textBox2->Text = myReader->GetString(2);
-			textBox3->Text = myReader->GetString(3);
-			textBox4->Text = Convert::ToString(myReader->GetDateTime(4).ToString("dd - MM - yyyy"));
+				try {
 
+					NS_SVC::gestion_personnel^ personnel = gcnew NS_SVC::gestion_personnel;
+
+					personnel->ajouter(textBox1->Text, textBox2->Text, textBox4->Text, textBox3->Text);
+
+					if (radioButton1->Checked && textBox5->Text != "" && textBox6->Text != "") {
+						NS_SVC::gestion_personnel^ personnel = gcnew NS_SVC::gestion_personnel;
+
+						personnel->ajouter_encadreur(textBox1->Text, textBox2->Text, textBox4->Text, textBox3->Text, textBox5->Text, textBox6->Text);
+						MessageBox::Show("Personnel enregistré :'D");
+					}
+					else {
+						MessageBox::Show("Veuillez Remplir le Nom et le Prénom du Supérieur hiérarchique");
+					}
+				}
+				catch (Exception^ ex) {
+
+					MessageBox::Show(ex->Message);
+
+				}
+			}
+			else {
+
+				try {
+
+					NS_SVC::gestion_personnel^ personnel = gcnew NS_SVC::gestion_personnel;
+
+					personnel->ajouter(textBox1->Text, textBox2->Text, textBox4->Text, textBox3->Text);
+
+					MessageBox::Show("Personnel enregistré :'D");
+				}
+				catch (Exception^ ex) {
+
+					MessageBox::Show(ex->Message);
+
+				}
+			}
 		}
-		myReader->Close();
-		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT * FROM Le_personnel WHERE ID = '" + ID + "' ", conDataBase);
-		DataTable^ data = gcnew DataTable();
-		data->Clear();
-		adapter->Fill(data);
-		bindingSource2->DataSource = data;
-		dataGridView2->DataSource = bindingSource2;
+		else {
+			MessageBox::Show("Il faut remplir les champs nécessaires");
+		}
 
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
-		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
-
-		String^ ID = textBox7->Text;
-		SqlCommand^ cmdDataBase = gcnew SqlCommand("UPDATE Le_personnel SET ID_Le_personnel = NULL WHERE ID_Le_personnel = " +ID + " DELETE FROM Le_personnel WHERE ID = " + ID + " ", conDataBase);
-
-		conDataBase->Open();
-		SqlDataReader^ myReader = cmdDataBase->ExecuteReader();
-		MessageBox::Show("Client supprimé avec succés");
-		conDataBase->Close();
-	}
-	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 		textBox1->Text = "";
 		textBox2->Text = "";
 		textBox3->Text = "";
 		textBox4->Text = "";
 		textBox5->Text = "";
 		textBox7->Text = "";
-		textBox8->Text = "";
+		
 		radioButton1->Checked = false;
 		radioButton2->Checked = true;
 		radioButton2->Checked = false;
 	}
+	private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		textBox5->Show();
+		textBox6->Show();
+		label9->Show();
+		label10->Show();
+	}
+	private: System::Void groupBox2_Enter(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		textBox5->Hide();
+		textBox6->Hide();
+		label9->Hide();
+		label10->Hide();
+	}
+	
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
+		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
+
+		if (textBox1->Text != "" && textBox2->Text != "" && textBox3->Text != "" && textBox4->Text != "") {
+			if (textBox5->Text != "" && textBox6->Text != "") {
+				try {
+
+					NS_SVC::gestion_personnel^ personnel = gcnew NS_SVC::gestion_personnel;
+
+					personnel->modifier(Int32::Parse(textBox7->Text), textBox1->Text, textBox2->Text, textBox4->Text, textBox3->Text);
+					
+
+
+					if (radioButton1->Checked && textBox5->Text != "" && textBox6->Text != "") {
+						NS_SVC::gestion_personnel^ personnel = gcnew NS_SVC::gestion_personnel;
+						personnel->modifier_encadreur(Int32::Parse(textBox7->Text), textBox1->Text, textBox2->Text, textBox4->Text, textBox3->Text, textBox5->Text, textBox6->Text);
+						
+
+						MessageBox::Show("Personnel modifié :'D");
+					}
+					else {
+						MessageBox::Show("Veuillez Remplir le Nom et le Prénom du Suppérieur hiérarchique");
+					}
+				}
+				catch (Exception^ ex) {
+
+					MessageBox::Show(ex->Message);
+
+				}
+			}
+			
+			else {
+				try {
+					NS_SVC::gestion_personnel^ personnel = gcnew NS_SVC::gestion_personnel;
+
+					personnel->modifier(Int32::Parse(textBox7->Text), textBox1->Text, textBox2->Text, textBox4->Text, textBox3->Text);
+
+					MessageBox::Show("Personnel modifié :'D");
+
+				}
+				catch (Exception^ ex) {
+
+					MessageBox::Show(ex->Message);
+
+				}
+			}
+		}
+		else {
+			MessageBox::Show("il faut remplir les champs nécessaires");
+		}
+	}
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
+		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
+		radioButton1->Checked = true;
+		radioButton2->Checked = false;
+
+		if (textBox7->Text != "") {
+			NS_SVC::gestion_personnel^ personnel = gcnew NS_SVC::gestion_personnel;
+
+			personnel->afficherByID(Int32::Parse(textBox7->Text), textBox7, textBox1, textBox2, textBox4, textBox3, textBox5, textBox6, bindingSource2, dataGridView2);
+			
+
+			dataGridView1->Hide();
+			dataGridView2->Show();
+
+			
+		}
+		
+		else {
+			MessageBox::Show("Veuillez entrez l'ID d'un Personnel");
+		}
+	}
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+
+		String^ constring = "Data Source=(local);Initial Catalog=POO;Integrated Security=True";
+		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
+
+		if (textBox7->Text != "") {
+			int ID = Int32::Parse(textBox7->Text);
+			if (MessageBox::Show("Etes-vous sûr de vouloir supprimer le personnel avec l'id " + ID + " ?", "Warning", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == System::Windows::Forms::DialogResult::Yes) {
+
+				NS_SVC::gestion_personnel^ Personnel = gcnew NS_SVC::gestion_personnel;
+
+				Personnel->supprimer(Int32::Parse(textBox7->Text));
+
+				MessageBox::Show("Personnel supprimé :'D");
+			}
+			else {
+				MessageBox::Show("Personnel non supprimé");
+			}
+		}
+		else {
+			MessageBox::Show("Il faut entrer un ID");
+		}
+
+	}
+	
 	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
 		retour->Show();

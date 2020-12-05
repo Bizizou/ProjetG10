@@ -45,6 +45,12 @@
     <ClCompile Include="Connexion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Personnel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gestion_personnel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -75,6 +81,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Connexion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Personnel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gestion_personnel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -122,18 +122,21 @@
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="Connexion.cpp" />
     <ClCompile Include="gestion_client.cpp" />
+    <ClCompile Include="gestion_personnel.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="MyForm1.cpp" />
     <ClCompile Include="MyForm2.cpp" />
     <ClCompile Include="MyForm3.cpp" />
     <ClCompile Include="MyForm4.cpp" />
     <ClCompile Include="MyForm5.cpp" />
+    <ClCompile Include="Personnel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CAD.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="Connexion.h" />
     <ClInclude Include="gestion_client.h" />
+    <ClInclude Include="gestion_personnel.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -152,6 +155,7 @@
     <ClInclude Include="MyForm5.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Personnel.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
