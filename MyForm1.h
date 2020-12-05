@@ -1,4 +1,6 @@
 #pragma once
+#include "Client.h"
+#include "gestion_client.h"
 using namespace System::Data::SqlClient;
 
 namespace ProjetG10 {
@@ -175,17 +177,19 @@ namespace ProjetG10 {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(440, 22);
+			this->label1->Location = System::Drawing::Point(587, 27);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(195, 25);
+			this->label1->Size = System::Drawing::Size(244, 31);
 			this->label1->TabIndex = 4;
 			this->label1->Text = L"Gestion des clients";
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(24, 100);
+			this->button1->Location = System::Drawing::Point(32, 123);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(99, 30);
+			this->button1->Size = System::Drawing::Size(132, 37);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Ajouter ";
 			this->button1->UseVisualStyleBackColor = true;
@@ -198,9 +202,10 @@ namespace ProjetG10 {
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label3->Location = System::Drawing::Point(153, 407);
+			this->label3->Location = System::Drawing::Point(204, 501);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(34, 15);
+			this->label3->Size = System::Drawing::Size(41, 18);
 			this->label3->TabIndex = 8;
 			this->label3->Text = L"Nom";
 			// 
@@ -211,9 +216,10 @@ namespace ProjetG10 {
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label4->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label4->Location = System::Drawing::Point(846, 406);
+			this->label4->Location = System::Drawing::Point(1128, 500);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(129, 15);
+			this->label4->Size = System::Drawing::Size(153, 18);
 			this->label4->TabIndex = 10;
 			this->label4->Text = L"Date du premier achat";
 			// 
@@ -224,9 +230,10 @@ namespace ProjetG10 {
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label5->Location = System::Drawing::Point(365, 407);
+			this->label5->Location = System::Drawing::Point(931, 501);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(103, 15);
+			this->label5->Size = System::Drawing::Size(125, 18);
 			this->label5->TabIndex = 12;
 			this->label5->Text = L"Adresse Livraison";
 			// 
@@ -237,9 +244,10 @@ namespace ProjetG10 {
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label6->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label6->Location = System::Drawing::Point(533, 407);
+			this->label6->Location = System::Drawing::Point(711, 501);
+			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(135, 15);
+			this->label6->Size = System::Drawing::Size(164, 18);
 			this->label6->TabIndex = 14;
 			this->label6->Text = L"Adresse de Facturation ";
 			this->label6->Click += gcnew System::EventHandler(this, &MyForm1::label6_Click);
@@ -251,9 +259,10 @@ namespace ProjetG10 {
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label7->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label7->Location = System::Drawing::Point(698, 407);
+			this->label7->Location = System::Drawing::Point(473, 501);
+			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(114, 15);
+			this->label7->Size = System::Drawing::Size(137, 18);
 			this->label7->TabIndex = 16;
 			this->label7->Text = L"Date de Naissance ";
 			// 
@@ -264,9 +273,10 @@ namespace ProjetG10 {
 			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label8->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label8->Location = System::Drawing::Point(240, 407);
+			this->label8->Location = System::Drawing::Point(320, 501);
+			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(51, 15);
+			this->label8->Size = System::Drawing::Size(61, 18);
 			this->label8->TabIndex = 18;
 			this->label8->Text = L"Prenom";
 			// 
@@ -274,114 +284,130 @@ namespace ProjetG10 {
 			// 
 			this->dataGridView1->BackgroundColor = System::Drawing::Color::White;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(144, 100);
+			this->dataGridView1->Location = System::Drawing::Point(192, 123);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(4);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(776, 254);
+			this->dataGridView1->RowHeadersWidth = 51;
+			this->dataGridView1->Size = System::Drawing::Size(1035, 313);
 			this->dataGridView1->TabIndex = 23;
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(940, 324);
+			this->button2->Location = System::Drawing::Point(13, 399);
+			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(99, 30);
+			this->button2->Size = System::Drawing::Size(132, 37);
 			this->button2->TabIndex = 24;
-			this->button2->Text = L"Supprimer";
+			this->button2->Text = L"Modifier";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm1::button2_Click);
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(940, 100);
+			this->button3->Location = System::Drawing::Point(1235, 399);
+			this->button3->Margin = System::Windows::Forms::Padding(4);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(99, 30);
+			this->button3->Size = System::Drawing::Size(132, 37);
 			this->button3->TabIndex = 25;
-			this->button3->Text = L"Afficher";
+			this->button3->Text = L"Supprimer";
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &MyForm1::button3_Click);
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(24, 324);
+			this->button4->Location = System::Drawing::Point(1235, 123);
+			this->button4->Margin = System::Windows::Forms::Padding(4);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(99, 30);
+			this->button4->Size = System::Drawing::Size(132, 37);
 			this->button4->TabIndex = 26;
-			this->button4->Text = L"Modifier";
+			this->button4->Text = L"Afficher";
 			this->button4->UseVisualStyleBackColor = true;
 			this->button4->Click += gcnew System::EventHandler(this, &MyForm1::button4_Click);
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(126, 424);
+			this->textBox1->Location = System::Drawing::Point(1253, 93);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(86, 20);
+			this->textBox1->Size = System::Drawing::Size(113, 22);
 			this->textBox1->TabIndex = 27;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(218, 424);
+			this->textBox2->Location = System::Drawing::Point(152, 522);
+			this->textBox2->Margin = System::Windows::Forms::Padding(4);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(101, 20);
+			this->textBox2->Size = System::Drawing::Size(133, 22);
 			this->textBox2->TabIndex = 28;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(337, 424);
+			this->textBox3->Location = System::Drawing::Point(293, 523);
+			this->textBox3->Margin = System::Windows::Forms::Padding(4);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(161, 20);
+			this->textBox3->Size = System::Drawing::Size(128, 22);
 			this->textBox3->TabIndex = 29;
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(518, 425);
+			this->textBox4->Location = System::Drawing::Point(429, 522);
+			this->textBox4->Margin = System::Windows::Forms::Padding(4);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(161, 20);
+			this->textBox4->Size = System::Drawing::Size(213, 22);
 			this->textBox4->TabIndex = 30;
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(685, 424);
+			this->textBox5->Location = System::Drawing::Point(1109, 523);
+			this->textBox5->Margin = System::Windows::Forms::Padding(4);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(142, 20);
+			this->textBox5->Size = System::Drawing::Size(188, 22);
 			this->textBox5->TabIndex = 31;
 			// 
 			// textBox6
 			// 
-			this->textBox6->Location = System::Drawing::Point(833, 424);
+			this->textBox6->Location = System::Drawing::Point(688, 522);
+			this->textBox6->Margin = System::Windows::Forms::Padding(4);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(142, 20);
+			this->textBox6->Size = System::Drawing::Size(188, 22);
 			this->textBox6->TabIndex = 32;
 			// 
 			// dataGridView2
 			// 
 			this->dataGridView2->BackgroundColor = System::Drawing::Color::White;
 			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView2->Location = System::Drawing::Point(144, 100);
+			this->dataGridView2->Location = System::Drawing::Point(192, 123);
+			this->dataGridView2->Margin = System::Windows::Forms::Padding(4);
 			this->dataGridView2->Name = L"dataGridView2";
-			this->dataGridView2->Size = System::Drawing::Size(776, 254);
+			this->dataGridView2->RowHeadersWidth = 51;
+			this->dataGridView2->Size = System::Drawing::Size(1035, 313);
 			this->dataGridView2->TabIndex = 33;
 			this->dataGridView2->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm1::dataGridView2_CellContentClick);
 			// 
 			// textBox7
 			// 
-			this->textBox7->Location = System::Drawing::Point(919, 71);
+			this->textBox7->Location = System::Drawing::Point(896, 522);
+			this->textBox7->Margin = System::Windows::Forms::Padding(4);
 			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(141, 20);
+			this->textBox7->Size = System::Drawing::Size(187, 22);
 			this->textBox7->TabIndex = 34;
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(965, 55);
+			this->label2->Location = System::Drawing::Point(1287, 68);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(50, 13);
+			this->label2->Size = System::Drawing::Size(64, 17);
 			this->label2->TabIndex = 35;
 			this->label2->Text = L"ID_Client";
 			// 
 			// button5
 			// 
-			this->button5->Location = System::Drawing::Point(466, 71);
+			this->button5->Location = System::Drawing::Point(621, 87);
+			this->button5->Margin = System::Windows::Forms::Padding(4);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(132, 23);
+			this->button5->Size = System::Drawing::Size(176, 28);
 			this->button5->TabIndex = 36;
 			this->button5->Text = L"Afficher tous les clients ";
 			this->button5->UseVisualStyleBackColor = true;
@@ -389,9 +415,10 @@ namespace ProjetG10 {
 			// 
 			// button6
 			// 
-			this->button6->Location = System::Drawing::Point(476, 505);
+			this->button6->Location = System::Drawing::Point(635, 622);
+			this->button6->Margin = System::Windows::Forms::Padding(4);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(75, 23);
+			this->button6->Size = System::Drawing::Size(100, 28);
 			this->button6->TabIndex = 37;
 			this->button6->Text = L"clear all";
 			this->button6->UseVisualStyleBackColor = true;
@@ -399,9 +426,10 @@ namespace ProjetG10 {
 			// 
 			// button7
 			// 
-			this->button7->Location = System::Drawing::Point(985, 525);
+			this->button7->Location = System::Drawing::Point(1313, 646);
+			this->button7->Margin = System::Windows::Forms::Padding(4);
 			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(75, 23);
+			this->button7->Size = System::Drawing::Size(100, 28);
 			this->button7->TabIndex = 38;
 			this->button7->Text = L"Retour";
 			this->button7->UseVisualStyleBackColor = true;
@@ -418,17 +446,19 @@ namespace ProjetG10 {
 					L"GHARDAIA", L"SAIDA", L"LAGHOUAT", L"MSILA", L"JIJEL", L"RELIZANE", L"GUELMA", L"AINBEIDA", L"KHENCHELA", L"BOUSAADA", L"MASCARA",
 					L"TIZI OUZOU"
 			});
-			this->comboBox1->Location = System::Drawing::Point(357, 468);
+			this->comboBox1->Location = System::Drawing::Point(476, 576);
+			this->comboBox1->Margin = System::Windows::Forms::Padding(4);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(121, 21);
+			this->comboBox1->Size = System::Drawing::Size(160, 24);
 			this->comboBox1->TabIndex = 39;
 			// 
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(377, 452);
+			this->label9->Location = System::Drawing::Point(503, 556);
+			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(65, 13);
+			this->label9->Size = System::Drawing::Size(86, 17);
 			this->label9->TabIndex = 40;
 			this->label9->Text = L"Ville associé";
 			// 
@@ -443,26 +473,28 @@ namespace ProjetG10 {
 					L"GHARDAIA", L"SAIDA", L"LAGHOUAT", L"MSILA", L"JIJEL", L"RELIZANE", L"GUELMA", L"AINBEIDA", L"KHENCHELA", L"BOUSAADA", L"MASCARA",
 					L"TIZI OUZOU"
 			});
-			this->comboBox2->Location = System::Drawing::Point(537, 468);
+			this->comboBox2->Location = System::Drawing::Point(716, 576);
+			this->comboBox2->Margin = System::Windows::Forms::Padding(4);
 			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(121, 21);
+			this->comboBox2->Size = System::Drawing::Size(160, 24);
 			this->comboBox2->TabIndex = 41;
 			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(564, 452);
+			this->label10->Location = System::Drawing::Point(752, 556);
+			this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(66, 13);
+			this->label10->Size = System::Drawing::Size(87, 17);
 			this->label10->TabIndex = 42;
 			this->label10->Text = L"Ville Associé";
 			// 
 			// MyForm1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1061, 551);
+			this->ClientSize = System::Drawing::Size(1415, 678);
 			this->Controls->Add(this->label10);
 			this->Controls->Add(this->comboBox2);
 			this->Controls->Add(this->label9);
@@ -491,6 +523,7 @@ namespace ProjetG10 {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button1);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"MyForm1";
 			this->Text = L"MyForm1";
 			this->Load += gcnew System::EventHandler(this, &MyForm1::MyForm1_Load);
@@ -512,122 +545,151 @@ namespace ProjetG10 {
 	}
 	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
-
-
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
-		SqlConnection^ condatabase = gcnew SqlConnection(constring);
-		if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "" || textBox4->Text == "" || textBox5->Text == "" || textBox6->Text == "" ) {
-			MessageBox::Show("vous devez remplir tous les champs");
+		String^ adresseFac = textBox6->Text;
+		String^ adresseLiv = textBox7->Text;
+		if (textBox2->Text != "" && textBox3->Text != "" && textBox4->Text != "" && textBox5->Text != "" && textBox6->Text != "" && textBox7->Text != "") {
+			if (adresseFac->StartsWith("Alger,") || adresseFac->StartsWith("Oran,") || adresseFac->StartsWith("Constantine,") || adresseFac->StartsWith("Annaba,") || adresseFac->StartsWith("Blida,") ||
+				adresseFac->StartsWith("Batna,") || adresseFac->StartsWith("Djelfa,") || adresseFac->StartsWith("Setif,") || adresseFac->StartsWith("Sidi bel Abbes,") || adresseFac->StartsWith("Biskra,") ||
+				adresseFac->StartsWith("Tebessa,") || adresseFac->StartsWith("El Oued,") || adresseFac->StartsWith("Skikda,") || adresseFac->StartsWith("Tiaret,") || adresseFac->StartsWith("Bejaia,") ||
+				adresseFac->StartsWith("Tlemcen,") || adresseFac->StartsWith("Ouargla,") || adresseFac->StartsWith("Bechar,") || adresseFac->StartsWith("Mostaganem,") || adresseFac->StartsWith("Bordj Bou Arreridj,") ||
+				adresseFac->StartsWith("Chlef,") || adresseFac->StartsWith("Souk Ahras,") || adresseFac->StartsWith("Medea,") || adresseFac->StartsWith("El Eulma,") || adresseFac->StartsWith("Touggourt,") ||
+				adresseFac->StartsWith("Ghardaia,") || adresseFac->StartsWith("Saida,") || adresseFac->StartsWith("Laghouat,") || adresseFac->StartsWith("M'Sila,") || adresseFac->StartsWith("Jijel,") ||
+				adresseFac->StartsWith("Relizane,") || adresseFac->StartsWith("Guelma,") || adresseFac->StartsWith("Ain Beida,") || adresseFac->StartsWith("Khenchela,") || adresseFac->StartsWith("Bousaada,") ||
+				adresseFac->StartsWith("Mascara,") || adresseFac->StartsWith("Tizi Ouzou,")) {
+
+				if (adresseLiv->StartsWith("Alger,") || adresseLiv->StartsWith("Oran,") || adresseLiv->StartsWith("Constantine,") || adresseLiv->StartsWith("Annaba,") || adresseLiv->StartsWith("Blida,") ||
+					adresseLiv->StartsWith("Batna,") || adresseLiv->StartsWith("Djelfa,") || adresseLiv->StartsWith("Setif,") || adresseLiv->StartsWith("Sidi bel Abbes,") || adresseLiv->StartsWith("Biskra,") ||
+					adresseLiv->StartsWith("Tebessa,") || adresseLiv->StartsWith("El Oued,") || adresseLiv->StartsWith("Skikda,") || adresseLiv->StartsWith("Tiaret,") || adresseLiv->StartsWith("Bejaia,") ||
+					adresseLiv->StartsWith("Tlemcen,") || adresseLiv->StartsWith("Ouargla,") || adresseLiv->StartsWith("Bechar,") || adresseLiv->StartsWith("Mostaganem,") || adresseLiv->StartsWith("Bordj Bou Arreridj,") ||
+					adresseLiv->StartsWith("Chlef,") || adresseLiv->StartsWith("Souk Ahras,") || adresseLiv->StartsWith("Medea,") || adresseLiv->StartsWith("El Eulma,") || adresseLiv->StartsWith("Touggourt,") ||
+					adresseLiv->StartsWith("Ghardaia,") || adresseLiv->StartsWith("Saida,") || adresseLiv->StartsWith("Laghouat,") || adresseLiv->StartsWith("M'Sila,") || adresseLiv->StartsWith("Jijel,") ||
+					adresseLiv->StartsWith("Relizane,") || adresseLiv->StartsWith("Guelma,") || adresseLiv->StartsWith("Ain Beida,") || adresseLiv->StartsWith("Khenchela,") || adresseLiv->StartsWith("Bousaada,") ||
+					adresseLiv->StartsWith("Mascara,") || adresseLiv->StartsWith("Tizi Ouzou,")) {
+
+					try {
+						NS_SVC::Gestion_Client^ client = gcnew NS_SVC::Gestion_Client;
+
+						client->ajouter(textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, adresseFac, adresseLiv);
+
+
+						MessageBox::Show("Client enregistré :'D");
+					}
+					catch (Exception^ ex) {
+
+						MessageBox::Show(ex->Message);
+
+					}
+				}
+				else {
+					MessageBox::Show("Adresse invalide, veuillez écrire l'adresse en suivant ce format : {Ville},{Autres infos}");
+				}
+			}
+			else {
+				MessageBox::Show("Adresse invalide, veuillez écrire l'adresse en suivant ce format : {Ville},{Autres infos}");
+			}
 		}
 		else {
-			String^ nom = textBox1->Text;
-			String^ prenom = textBox2->Text;
-			String^ adresse_livraison = textBox3->Text;
-			String^ adresse_facture = textBox4->Text;
-			String^ date_naissance = Convert::ToDateTime(textBox5->Text).ToString("yyyy-MM-dd");
-			String^ date_achat = Convert::ToDateTime(textBox6->Text).ToString("yyyy-MM-dd");
-			String^ ville_livraison = comboBox1->Text;
-			String^ ville_facture= comboBox2->Text;
-
-			SqlCommand^ cmdDataBase = gcnew SqlCommand("INSERT INTO Clients (Nom, Prenom, Date_de_naissance, Adresse_de_facturation, Adresse_de_livraison, premier_achat) values('" + nom + "','" + prenom + "','" + date_naissance + "','"+ville_facture+"," + adresse_facture + "','"+ville_livraison+"," + adresse_livraison + "','" + date_achat + "');", condatabase);
-			SqlDataReader^ myReader1;
-
-
-			try {
-				condatabase->Open();
-				myReader1 = cmdDataBase->ExecuteReader();
-				MessageBox::Show("client enregistré");
-			}
-			catch (Exception^ ex) {
-				if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "" || textBox4->Text == "" || textBox5->Text == "" || textBox6->Text == "") {
-					MessageBox::Show("vous devez remplir tous les champs");
-				}
-
-			}
+			MessageBox::Show("Il faut remplir tout les champs");
 		}
 	}
-
-
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-
 		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 
-		String^ ID = textBox7->Text;
-		SqlCommand^ cmdDataBase = gcnew SqlCommand("DELETE FROM Clients WHERE Numero_client = '" + ID + "' ", conDataBase);
+		if (textBox2->Text != "" && textBox3->Text != "" && textBox4->Text != "" && textBox5->Text != "" && textBox6->Text != "" && textBox7->Text != "") {
+			String^ adresseFac = textBox6->Text;
+			String^ adresseLiv = textBox7->Text;
 
-		conDataBase->Open();
-		SqlDataReader^ myReader = cmdDataBase->ExecuteReader();
-		MessageBox::Show("Le client a été supprimé ");
-		conDataBase->Close();
+			if (adresseFac->StartsWith("Alger,") || adresseFac->StartsWith("Oran,") || adresseFac->StartsWith("Constantine,") || adresseFac->StartsWith("Annaba,") || adresseFac->StartsWith("Blida,") ||
+				adresseFac->StartsWith("Batna,") || adresseFac->StartsWith("Djelfa,") || adresseFac->StartsWith("Setif,") || adresseFac->StartsWith("Sidi bel Abbes,") || adresseFac->StartsWith("Biskra,") ||
+				adresseFac->StartsWith("Tebessa,") || adresseFac->StartsWith("El Oued,") || adresseFac->StartsWith("Skikda,") || adresseFac->StartsWith("Tiaret,") || adresseFac->StartsWith("Bejaia,") ||
+				adresseFac->StartsWith("Tlemcen,") || adresseFac->StartsWith("Ouargla,") || adresseFac->StartsWith("Bechar,") || adresseFac->StartsWith("Mostaganem,") || adresseFac->StartsWith("Bordj Bou Arreridj,") ||
+				adresseFac->StartsWith("Chlef,") || adresseFac->StartsWith("Souk Ahras,") || adresseFac->StartsWith("Medea,") || adresseFac->StartsWith("El Eulma,") || adresseFac->StartsWith("Touggourt,") ||
+				adresseFac->StartsWith("Ghardaia,") || adresseFac->StartsWith("Saida,") || adresseFac->StartsWith("Laghouat,") || adresseFac->StartsWith("M'Sila,") || adresseFac->StartsWith("Jijel,") ||
+				adresseFac->StartsWith("Relizane,") || adresseFac->StartsWith("Guelma,") || adresseFac->StartsWith("Ain Beida,") || adresseFac->StartsWith("Khenchela,") || adresseFac->StartsWith("Bousaada,") ||
+				adresseFac->StartsWith("Mascara,") || adresseFac->StartsWith("Tizi Ouzou,")) {
+
+				if (adresseLiv->StartsWith("Alger,") || adresseLiv->StartsWith("Oran,") || adresseLiv->StartsWith("Constantine,") || adresseLiv->StartsWith("Annaba,") || adresseLiv->StartsWith("Blida,") ||
+					adresseLiv->StartsWith("Batna,") || adresseLiv->StartsWith("Djelfa,") || adresseLiv->StartsWith("Setif,") || adresseLiv->StartsWith("Sidi bel Abbes,") || adresseLiv->StartsWith("Biskra,") ||
+					adresseLiv->StartsWith("Tebessa,") || adresseLiv->StartsWith("El Oued,") || adresseLiv->StartsWith("Skikda,") || adresseLiv->StartsWith("Tiaret,") || adresseLiv->StartsWith("Bejaia,") ||
+					adresseLiv->StartsWith("Tlemcen,") || adresseLiv->StartsWith("Ouargla,") || adresseLiv->StartsWith("Bechar,") || adresseLiv->StartsWith("Mostaganem,") || adresseLiv->StartsWith("Bordj Bou Arreridj,") ||
+					adresseLiv->StartsWith("Chlef,") || adresseLiv->StartsWith("Souk Ahras,") || adresseLiv->StartsWith("Medea,") || adresseLiv->StartsWith("El Eulma,") || adresseLiv->StartsWith("Touggourt,") ||
+					adresseLiv->StartsWith("Ghardaia,") || adresseLiv->StartsWith("Saida,") || adresseLiv->StartsWith("Laghouat,") || adresseLiv->StartsWith("M'Sila,") || adresseLiv->StartsWith("Jijel,") ||
+					adresseLiv->StartsWith("Relizane,") || adresseLiv->StartsWith("Guelma,") || adresseLiv->StartsWith("Ain Beida,") || adresseLiv->StartsWith("Khenchela,") || adresseLiv->StartsWith("Bousaada,") ||
+					adresseLiv->StartsWith("Mascara,") || adresseLiv->StartsWith("Tizi Ouzou,")) {
+
+					try {
+						NS_SVC::Gestion_Client^ client = gcnew NS_SVC::Gestion_Client;
+
+						client->modifier(Int32::Parse(textBox1->Text), textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, adresseFac, adresseLiv);
+						MessageBox::Show("Client modifié :'D");
+						conDataBase->Close();
+					}
+					catch (Exception^ ex) {
+
+						MessageBox::Show(ex->Message);
+
+					}
+				}
+				else {
+					MessageBox::Show("Adresse invalide, veuillez écrire l'adresse en suivant ce format : {Ville},{Autres infos}");
+				}
+			}
+			else {
+				MessageBox::Show("Adresse invalide, veuillez écrire l'adresse en suivant ce format : {Ville},{Autres infos}");
+			}
+		}
+		else {
+			MessageBox::Show("Il faut remplir tout les champs");
+		}
 	}
-
-
 
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-
-
-		String^ reference = textBox7->Text;
-		String^ nom = textBox1->Text;
-		String^ prenom = textBox2->Text;
 		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 
-		SqlCommand^ cmdDataBase = gcnew SqlCommand("SELECT * FROM Clients WHERE Numero_client = '" + reference + "' OR Nom = '"+nom+"' OR Prenom = '"+prenom+"' ", conDataBase);
-		conDataBase->Open();
-		SqlDataReader^ myReader = cmdDataBase->ExecuteReader();
-		dataGridView1->Hide();
-		dataGridView2->Show();
+		if (textBox1->Text != "") {
+			NS_SVC::Gestion_Client^ client = gcnew NS_SVC::Gestion_Client;
 
-		while (myReader->Read()) {
-			textBox1->Text = myReader->GetString(1);
-			textBox2->Text = myReader->GetString(2);
-			textBox3->Text = myReader->GetString(5);
-			textBox4->Text = myReader->GetString(4);
-			textBox5->Text = Convert::ToString(myReader->GetDateTime(3).ToString("dd-MM-yyyy"));
-			textBox6->Text = Convert::ToString(myReader->GetDateTime(6).ToString("dd-MM-yyyy"));
+			client->supprimer(Int32::Parse(textBox1->Text));
+			MessageBox::Show("Client supprimé :'D");
 		}
-		myReader->Close();
-		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT * FROM Clients WHERE Numero_client = '" + reference + "' OR Nom = '" + nom + "' OR Prenom = '" + prenom + "' ", conDataBase);
-		DataTable^ data = gcnew DataTable();
-		data->Clear();
-		adapter->Fill(data);
-		bindingSource2->DataSource = data;
-		dataGridView2->DataSource = bindingSource2;
-
+		else {
+			MessageBox::Show("Il faut remplir l'ID d'un Client");
+		}
 	}
+
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (textBox1->Text != "") {
+			NS_SVC::Gestion_Client^ client = gcnew NS_SVC::Gestion_Client;
 
-		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
-		SqlConnection^ condatabase = gcnew SqlConnection(constring);
-		String^ id = textBox7->Text;
-		String^ nom = textBox1->Text;
-		String^ prenom = textBox2->Text;
-		String^ adresse_livraison = textBox3->Text;
-		String^ adresse_facture = textBox4->Text;
-		String^ date_naissance = Convert::ToDateTime(textBox5->Text).ToString("dd-MM-yyyy");
-		String^ date_achat = Convert::ToDateTime(textBox6->Text).ToString("dd-MM-yyyy");
-		String^ ville_livraison = comboBox1->Text;
-		String^ ville_facture = comboBox2->Text;
+			client->afficherByID(Int32::Parse(textBox1->Text), textBox1, textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, bindingSource2, dataGridView2);
 
-		SqlCommand^ cmdDataBase = gcnew SqlCommand("UPDATE Clients SET  Nom = '" + nom + "', Prenom ='" + prenom + "' , Date_de_naissance = '" + date_naissance + "' , premier_achat = '" + date_achat + "', Adresse_de_livraison = '"+ville_livraison+"" + adresse_livraison + "', Adresse_de_facturation = '"+ville_facture+"" +adresse_facture+ "' WHERE Numero_client = " + id + " ;", condatabase);
-		SqlDataReader^ myReader;
-		try {
-			condatabase->Open();
-			myReader = cmdDataBase->ExecuteReader();
-			MessageBox::Show("Le client a été modifié");
+			dataGridView1->Hide();
+			dataGridView2->Show();
 		}
-		catch (Exception^ ex) {
-			MessageBox::Show(ex->Message);
+		else if (textBox2->Text != "") {
+			NS_SVC::Gestion_Client^ client = gcnew NS_SVC::Gestion_Client;
+
+			client->afficherByNom(textBox2->Text, textBox1, textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, bindingSource2, dataGridView2);
+
+			dataGridView1->Hide();
+			dataGridView2->Show();
 		}
+		else if (textBox3->Text != "") {
+			NS_SVC::Gestion_Client^ client = gcnew NS_SVC::Gestion_Client;
 
+			client->afficherByPrenom(textBox2->Text, textBox1, textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, bindingSource2, dataGridView2);
 
+			dataGridView1->Hide();
+			dataGridView2->Show();
+		}
+		else {
+			MessageBox::Show("Vous devez introduire l'ID ou le Nom ou le Prénom d'un Client");
+		}
 
 	}
-
-
-
 
 
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -660,5 +722,5 @@ namespace ProjetG10 {
 	}
 	private: System::Void dataGridView2_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
-};
+	};
 }

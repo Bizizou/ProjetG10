@@ -118,6 +118,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CAD.cpp" />
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Connexion.cpp" />
+    <ClCompile Include="gestion_client.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="MyForm1.cpp" />
     <ClCompile Include="MyForm2.cpp" />
@@ -126,6 +130,10 @@
     <ClCompile Include="MyForm5.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CAD.h" />
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="Connexion.h" />
+    <ClInclude Include="gestion_client.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

@@ -33,6 +33,18 @@
     <ClCompile Include="MyForm5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CAD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gestion_client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Connexion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -51,6 +63,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MyForm5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CAD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gestion_client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Connexion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
