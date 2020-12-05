@@ -99,6 +99,7 @@ namespace ProjetG10 {
 	private: System::Windows::Forms::TextBox^ textBox15;
 	private: System::Windows::Forms::TextBox^ textBox16;
 	private: System::Windows::Forms::TextBox^ textBox17;
+	private: System::Windows::Forms::Button^ button6;
 
 
 
@@ -165,6 +166,7 @@ namespace ProjetG10 {
 			this->textBox15 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox16 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox17 = (gcnew System::Windows::Forms::TextBox());
+			this->button6 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
@@ -213,7 +215,7 @@ namespace ProjetG10 {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(96, 426);
+			this->textBox1->Location = System::Drawing::Point(205, 414);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(100, 20);
 			this->textBox1->TabIndex = 4;
@@ -221,7 +223,7 @@ namespace ProjetG10 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(111, 410);
+			this->label1->Location = System::Drawing::Point(217, 398);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(72, 13);
 			this->label1->TabIndex = 10;
@@ -229,7 +231,7 @@ namespace ProjetG10 {
 			// 
 			// textBox7
 			// 
-			this->textBox7->Location = System::Drawing::Point(732, 426);
+			this->textBox7->Location = System::Drawing::Point(448, 488);
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->Size = System::Drawing::Size(100, 20);
 			this->textBox7->TabIndex = 16;
@@ -262,28 +264,28 @@ namespace ProjetG10 {
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(202, 426);
+			this->textBox2->Location = System::Drawing::Point(330, 414);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(100, 20);
 			this->textBox2->TabIndex = 5;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(308, 426);
+			this->textBox3->Location = System::Drawing::Point(803, 460);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(100, 20);
 			this->textBox3->TabIndex = 6;
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(520, 426);
+			this->textBox5->Location = System::Drawing::Point(330, 488);
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(100, 20);
 			this->textBox5->TabIndex = 8;
 			// 
 			// textBox6
 			// 
-			this->textBox6->Location = System::Drawing::Point(626, 426);
+			this->textBox6->Location = System::Drawing::Point(205, 488);
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(100, 20);
 			this->textBox6->TabIndex = 9;
@@ -291,7 +293,7 @@ namespace ProjetG10 {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(216, 410);
+			this->label2->Location = System::Drawing::Point(338, 398);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(86, 13);
 			this->label2->TabIndex = 11;
@@ -300,7 +302,7 @@ namespace ProjetG10 {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(424, 410);
+			this->label3->Location = System::Drawing::Point(813, 398);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(79, 13);
 			this->label3->TabIndex = 12;
@@ -309,7 +311,7 @@ namespace ProjetG10 {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(534, 410);
+			this->label5->Location = System::Drawing::Point(337, 472);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(86, 13);
 			this->label5->TabIndex = 14;
@@ -318,7 +320,7 @@ namespace ProjetG10 {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(645, 410);
+			this->label6->Location = System::Drawing::Point(215, 472);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(81, 13);
 			this->label6->TabIndex = 15;
@@ -326,7 +328,7 @@ namespace ProjetG10 {
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(414, 426);
+			this->textBox4->Location = System::Drawing::Point(803, 414);
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(100, 20);
 			this->textBox4->TabIndex = 20;
@@ -334,7 +336,7 @@ namespace ProjetG10 {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(334, 410);
+			this->label4->Location = System::Drawing::Point(829, 444);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(50, 13);
 			this->label4->TabIndex = 21;
@@ -343,7 +345,7 @@ namespace ProjetG10 {
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(741, 410);
+			this->label7->Location = System::Drawing::Point(457, 472);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(91, 13);
 			this->label7->TabIndex = 22;
@@ -352,7 +354,7 @@ namespace ProjetG10 {
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(838, 410);
+			this->label8->Location = System::Drawing::Point(445, 398);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(100, 13);
 			this->label8->TabIndex = 23;
@@ -361,14 +363,14 @@ namespace ProjetG10 {
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(873, 378);
+			this->label9->Location = System::Drawing::Point(530, 393);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(0, 13);
 			this->label9->TabIndex = 24;
 			// 
 			// textBox8
 			// 
-			this->textBox8->Location = System::Drawing::Point(838, 426);
+			this->textBox8->Location = System::Drawing::Point(448, 414);
 			this->textBox8->Name = L"textBox8";
 			this->textBox8->Size = System::Drawing::Size(100, 20);
 			this->textBox8->TabIndex = 27;
@@ -391,14 +393,14 @@ namespace ProjetG10 {
 			// 
 			// textBox10
 			// 
-			this->textBox10->Location = System::Drawing::Point(414, 490);
+			this->textBox10->Location = System::Drawing::Point(8, 58);
 			this->textBox10->Name = L"textBox10";
 			this->textBox10->Size = System::Drawing::Size(100, 20);
 			this->textBox10->TabIndex = 30;
 			// 
 			// textBox11
 			// 
-			this->textBox11->Location = System::Drawing::Point(520, 490);
+			this->textBox11->Location = System::Drawing::Point(114, 58);
 			this->textBox11->Name = L"textBox11";
 			this->textBox11->Size = System::Drawing::Size(100, 20);
 			this->textBox11->TabIndex = 31;
@@ -406,16 +408,16 @@ namespace ProjetG10 {
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(444, 469);
+			this->label11->Location = System::Drawing::Point(23, 42);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(74, 13);
+			this->label11->Size = System::Drawing::Size(57, 13);
 			this->label11->TabIndex = 32;
-			this->label11->Text = L"Referencetest";
+			this->label11->Text = L"Reference";
 			// 
 			// label12
 			// 
 			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(550, 469);
+			this->label12->Location = System::Drawing::Point(144, 37);
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(42, 13);
 			this->label12->TabIndex = 33;
@@ -473,11 +475,21 @@ namespace ProjetG10 {
 			this->textBox17->Size = System::Drawing::Size(100, 20);
 			this->textBox17->TabIndex = 41;
 			// 
+			// button6
+			// 
+			this->button6->Location = System::Drawing::Point(794, 488);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(126, 23);
+			this->button6->TabIndex = 42;
+			this->button6->Text = L"Ajouter un autre article";
+			this->button6->UseVisualStyleBackColor = true;
+			// 
 			// MyForm4
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1061, 551);
+			this->Controls->Add(this->button6);
 			this->Controls->Add(this->textBox17);
 			this->Controls->Add(this->textBox16);
 			this->Controls->Add(this->textBox15);
@@ -647,12 +659,27 @@ namespace ProjetG10 {
 		String^ date_achat_sansannee = date2->Substring(5, 5);
 		textBox17->Text = date_achat_sansannee;
 
-		SqlCommand^ cmdDataBase = gcnew SqlCommand("INSERT INTO Commandes (Reference_commande, Remise_10, Remise_5, Date_de_livraison, Date_d_emission, Date_de_paiement,Moyen_de_paiement, Montant_total_HT, Montant_total_TVA, Montant_total_TTC, Numero_client) VALUES('"+reference+"', (SELECT Remise1 FROM Remises, Clients WHERE '" + date_naissance_sansannee + "'= '"+date_emission_sansannee+"' AND [Clients].Nom = '" + nom_client + "' AND [Clients].Prenom = '"+prenom_client+"' ), (SELECT Remise2 FROM Remises, Clients WHERE '" + date_achat_sansannee + "'= '" + date_emission_sansannee + "' AND [Clients].Nom = '" + nom_client + "' AND [Clients].Prenom = '" + prenom_client + "' ) , '"+date_livraison+"','"+date_emission+"', '"+date_paiement+"', '"+moyen_paiement+"',(SELECT (Montant_HT * '" + quantite + "') FROM Article WHERE designation = '" + nom_article + "'),(SELECT (Montant_TVA * '" + quantite + "') FROM Article WHERE designation = '" + nom_article + "'),(SELECT (Montant_TTC * '" + quantite + "') FROM Article WHERE designation = '" + nom_article + "'),(SELECT Numero_client FROM Clients WHERE Nom = '" + nom_client + "' AND Prenom = '" + prenom_client + "'));", condatabase);
-		SqlDataReader^ myReader2;
+		condatabase->Open();
+		
+		SqlCommand^ cmdDataBase = gcnew SqlCommand("INSERT INTO Commandes (Reference_commande, Remise_10, Remise_5,Quantite_article, Date_de_livraison, Date_d_emission, Date_de_paiement,Moyen_de_paiement, Montant_total_HT, Montant_total_TVA, Montant_total_TTC, Numero_client) VALUES('"+reference+"', (SELECT Remise_10 FROM Remises, Clients WHERE '" + date_naissance_sansannee + "'= '"+date_emission_sansannee+"' AND [Clients].Nom = '" + nom_client + "' AND [Clients].Prenom = '"+prenom_client+"' ), (SELECT Remise_5 FROM Remises, Clients WHERE '" + date_achat_sansannee + "'= '" + date_emission_sansannee + "' AND [Clients].Nom = '" + nom_client + "' AND [Clients].Prenom = '" + prenom_client + "' ) ,(SELECT SUM(Quantite) FROM Contenir WHERE Reference_commande = '" + reference + "' ), '"+date_livraison+"','"+date_emission+"', '"+date_paiement+"', '"+moyen_paiement+"',(SELECT SUM(Montant_HT) FROM Contenir WHERE Reference_commande = '" + reference + "'),(SELECT SUM(Montant_TVA) FROM Contenir WHERE Reference_commande = '" + reference + "'),(SELECT SUM(Montant_TTC) FROM Contenir WHERE Reference_commande = '" + reference + "'),(SELECT Numero_client FROM Clients WHERE Nom = '" + nom_client + "' AND Prenom = '" + prenom_client + "'));", condatabase);
+		SqlDataReader^ myReader2 = cmdDataBase->ExecuteReader();
+		myReader2->Close();
+
+		SqlCommand^ cmdDataBase8 = gcnew SqlCommand("INSERT INTO Contenir (Reference_commande, Reference, Quantite, Montant_HT, Montant_TVA, Montant_TTC) VALUES('"+reference+"', (SELECT [Article].Reference FROM Article WHERE designation = '"+nom_article+"' ), '"+quantite+"', (SELECT ([Article].Montant_HT * '"+quantite+"') FROM Article WHERE designation = '"+nom_article+"'),(SELECT ([Article].Montant_TVA * '" + quantite + "') FROM Article WHERE designation = '" + nom_article + "'), (SELECT ([Article].Montant_TTC * '" + quantite + "') FROM Article WHERE designation = '" + nom_article + "') );", condatabase);
+		SqlDataReader^ myReader8 = cmdDataBase8->ExecuteReader();
+		myReader8->Close();
+
+		SqlCommand^ cmdDataBase9 = gcnew SqlCommand("UPDATE Commandes SET Quantite_article = (SELECT SUM(Quantite)FROM Contenir WHERE Reference_commande = '"+reference+"'), Date_de_livraison = '"+date_livraison+"', Date_d_emission = '"+date_emission+"', Date_de_paiement = '"+date_paiement+"', Moyen_de_paiement = '"+moyen_paiement+"', Montant_total_HT = (SELECT SUM(Montant_HT) FROM Contenir WHERE Reference_commande = '"+reference+"'),Montant_total_TVA = (SELECT SUM(Montant_TVA) FROM Contenir WHERE Reference_commande = '" + reference + "'),Montant_total_TTC = (SELECT SUM(Montant_TTC) FROM Contenir WHERE Reference_commande = '" + reference + "') ,Remise_10 = (SELECT Remise_10 FROM Remises, Clients WHERE '" + date_naissance_sansannee + "'= '" + date_emission_sansannee + "' AND [Clients].Nom = '" + nom_client + "' AND [Clients].Prenom = '" + prenom_client + "' ) ,Remise_5= (SELECT Remise_5 FROM Remises, Clients WHERE '" + date_achat_sansannee + "'= '" + date_emission_sansannee + "' AND [Clients].Nom = '" + nom_client + "' AND [Clients].Prenom = '" + prenom_client + "' ) WHERE Reference_commande = '"+reference+"' ", condatabase);
+		SqlDataReader^ myReader9 = cmdDataBase9->ExecuteReader();
+		myReader9->Close();
+		
+
+
 		try {
-			condatabase->Open();
-			myReader2 = cmdDataBase->ExecuteReader();
-			MessageBox::Show("Commande enregistré avec succés");
+			
+			
+			MessageBox::Show("Commande enregistré avec succés, vous pouvez ajouter plusieurs articles sur la meme commande en appuyant sur le bouton 'Ajouter d'autre article'");
+
 		}
 		catch (Exception^ ex) {
 
@@ -714,8 +741,9 @@ namespace ProjetG10 {
 
 		SqlCommand^ cmdDataBase = gcnew SqlCommand("SELECT * FROM Commandes WHERE Reference_commande = '" + reference + "' ", conDataBase);
 		SqlCommand^ cmdDataBase1 = gcnew SqlCommand("SELECT Nom, Prenom FROM Clients, Commandes WHERE [Clients].Numero_client = [Commandes].Numero_client ", conDataBase1);
-		SqlCommand^ cmdDataBase2 = gcnew SqlCommand("SELECT designation FROM Article, Contenir WHERE [Article].ID_Article = [Contenir].ID_Article ", conDataBase2);
-		SqlCommand^ cmdDataBase3 = gcnew SqlCommand("SELECT (Montant_total_TTC / Montant_TTC) FROM Commandes, Article, Contenir WHERE [Article].ID_Article = [Contenir].ID_Article   ", conDataBase3);
+		SqlCommand^ cmdDataBase2 = gcnew SqlCommand("SELECT designation FROM Article, Contenir WHERE [Article].Reference = [Contenir].Reference ", conDataBase2);
+		//SqlCommand^ cmdDataBase3 = gcnew SqlCommand("SELECT (Montant_total_TTC / Montant_TTC) FROM Commandes, Article, Contenir WHERE [Article].Reference = [Contenir].Reference   ", conDataBase3);
+		SqlCommand^ cmdDataBase3 = gcnew SqlCommand("SELECT Quantite_article FROM Commandes, Article, Contenir WHERE [Article].Reference = '"+reference+"'  ", conDataBase3);
 
 		conDataBase->Open();
 		conDataBase1->Open();
@@ -731,10 +759,10 @@ namespace ProjetG10 {
 
 		while (myReader->Read()) {
 
-			textBox5->Text = Convert::ToString(myReader->GetDateTime(3).ToString("dd-MM-yyyy"));
-			textBox6->Text = Convert::ToString(myReader->GetDateTime(4).ToString("dd-MM-yyyy"));
-			textBox7->Text = Convert::ToString(myReader->GetDateTime(5).ToString("dd-MM-yyyy"));
-			textBox8->Text = myReader->GetString(6);
+			textBox5->Text = Convert::ToString(myReader->GetDateTime(4).ToString("dd-MM-yyyy"));
+			textBox6->Text = Convert::ToString(myReader->GetDateTime(5).ToString("dd-MM-yyyy"));
+			textBox7->Text = Convert::ToString(myReader->GetDateTime(6).ToString("dd-MM-yyyy"));
+			textBox8->Text = myReader->GetString(7);
 			textBox10->Text = myReader->GetString(0);
 			//textBox11->Text = Convert::ToString(myReader->GetDouble(1));
 
