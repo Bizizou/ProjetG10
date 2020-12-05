@@ -528,6 +528,12 @@ namespace ProjetG10 {
 		}
 #pragma endregion
 	private: System::Void MyForm4_Load(System::Object^ sender, System::EventArgs^ e) {
+		textBox12->Hide();
+		textBox13->Hide();
+		textBox14->Hide();
+		textBox15->Hide();
+		textBox16->Hide();
+		textBox17->Hide();
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 

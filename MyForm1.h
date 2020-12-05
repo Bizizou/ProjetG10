@@ -517,7 +517,7 @@ namespace ProjetG10 {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
 		SqlConnection^ condatabase = gcnew SqlConnection(constring);
-		if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "" || textBox4->Text == "" || textBox5->Text == "" || textBox6->Text == "") {
+		if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "" || textBox4->Text == "" || textBox5->Text == "" || textBox6->Text == "" ) {
 			MessageBox::Show("vous devez remplir tous les champs");
 		}
 		else {
@@ -537,7 +537,7 @@ namespace ProjetG10 {
 			try {
 				condatabase->Open();
 				myReader1 = cmdDataBase->ExecuteReader();
-				MessageBox::Show("client  enregistré");
+				MessageBox::Show("client enregistré");
 			}
 			catch (Exception^ ex) {
 				if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "" || textBox4->Text == "" || textBox5->Text == "" || textBox6->Text == "") {
@@ -545,14 +545,7 @@ namespace ProjetG10 {
 				}
 
 			}
-
-
-
-
 		}
-
-
-
 	}
 
 
