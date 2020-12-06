@@ -64,6 +64,7 @@ namespace ProjetG10 {
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::Button^ button9;
+	private: System::Windows::Forms::Button^ button1;
 
 	private: System::ComponentModel::IContainer^ components;
 	protected:
@@ -82,6 +83,8 @@ namespace ProjetG10 {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
@@ -96,6 +99,7 @@ namespace ProjetG10 {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->button9 = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			this->SuspendLayout();
@@ -186,7 +190,25 @@ namespace ProjetG10 {
 			// 
 			// dataGridView1
 			// 
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle2;
 			this->dataGridView1->Location = System::Drawing::Point(200, 72);
 			this->dataGridView1->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->dataGridView1->Name = L"dataGridView1";
@@ -226,18 +248,19 @@ namespace ProjetG10 {
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(95, 20);
 			this->textBox2->TabIndex = 11;
+
 			// 
-			// button9
+			// button1
 			// 
-			this->button9->FlatAppearance->BorderSize = 0;
-			this->button9->Location = System::Drawing::Point(932, 233);
-			this->button9->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
-			this->button9->Name = L"button9";
-			this->button9->Size = System::Drawing::Size(104, 28);
-			this->button9->TabIndex = 13;
-			this->button9->Text = L"Simulation";
-			this->button9->UseVisualStyleBackColor = true;
-			this->button9->Click += gcnew System::EventHandler(this, &MyForm5::button9_Click);
+			this->button1->FlatAppearance->BorderSize = 0;
+			this->button1->Location = System::Drawing::Point(932, 349);
+			this->button1->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(104, 28);
+			this->button1->TabIndex = 14;
+			this->button1->Text = L"Simulation";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm5::button1_Click_1);
 			// 
 			// MyForm5
 			// 
@@ -245,6 +268,7 @@ namespace ProjetG10 {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
 			this->ClientSize = System::Drawing::Size(1041, 524);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->button9);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->textBox2);
@@ -283,7 +307,7 @@ namespace ProjetG10 {
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 		conDataBase->Open();
 
-		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT SUM(QuantiteArticle*Montant_TotalTTC) AS chiffre_affaire FROM contient,Commande WHERE [Commande].Reference = [contient].Reference AND LEFT(CONVERT(varchar(10),Date_Emission,101),2 ) = '" + mois + "'", conDataBase);
+		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT SUM(Quantite*Montant_total_TTC) AS chiffre_affaire FROM Contenir,Commandes WHERE [Commandes].Reference_commande = [Contenir].Reference_commande AND LEFT(CONVERT(varchar(10),Date_d_emission,101),2 ) = '" + mois + "'", conDataBase);
 
 		DataTable^ data = gcnew DataTable();
 		data->Clear();
@@ -296,7 +320,7 @@ namespace ProjetG10 {
 		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 		conDataBase->Open();
-		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT ReferenceArticle,Nom_Article FROM Article WHERE Quantite_Article < Seuil_reapprovisionnement ", conDataBase);
+		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT Reference, designation FROM Article WHERE Quantite < Seuil_de_reapprovisionnement ", conDataBase);
 		DataTable^ data = gcnew DataTable();
 		data->Clear();
 		adapter->Fill(data);
@@ -312,7 +336,7 @@ namespace ProjetG10 {
 		conDataBase->Open();
 
 
-		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT SUM(Montant_TotalTTC) AS Montant_Total FROM Commande WHERE Num_client = '" + Id + "' ", conDataBase);
+		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT SUM(Montant_total_TTC) AS Montant_Total FROM Commandes WHERE Numero_client = '" + Id + "' ", conDataBase);
 		DataTable^ data = gcnew DataTable();
 		data->Clear();
 		adapter->Fill(data);
@@ -325,7 +349,7 @@ namespace ProjetG10 {
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 		conDataBase->Open();
 
-		SqlDataAdapter^ adapter = gcnew SqlDataAdapter(" SELECT (SUM(QuantiteArticle*Montant_TotalTTC))/COUNT(DISTINCT([Commande].Reference)) AS Panier_Moyen FROM Commande,contient ", conDataBase);
+		SqlDataAdapter^ adapter = gcnew SqlDataAdapter(" SELECT (SUM(Quantite*Montant_total_TTC))/COUNT(DISTINCT([Commandes].Reference_commande)) AS Panier_Moyen FROM Commandes, Contenir ", conDataBase);
 		DataTable^ data = gcnew DataTable();
 		data->Clear();
 		adapter->Fill(data);
@@ -339,7 +363,7 @@ namespace ProjetG10 {
 		conDataBase->Open();
 
 
-		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT TOP 10 [contient].ReferenceArticle,[Article].Nom_Article,SUM([contient].QuantiteArticle) AS Quantite_Vendu FROM Article,contient WHERE [contient].ReferenceArticle = [Article].ReferenceArticle GROUP BY [contient].ReferenceArticle,[Article].Nom_Article ORDER BY SUM([contient].QuantiteArticle) DESC ", conDataBase);
+		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT TOP 10 [Contenir].Reference,[Article].designation,SUM([Contenir].Quantite) AS Quantite_Vendu FROM Article, Contenir WHERE [Contenir].Reference = [Article].Reference GROUP BY [Contenir].Reference,[Article].designation ORDER BY SUM([Contenir].Quantite) DESC ", conDataBase);
 		DataTable^ data = gcnew DataTable();
 		data->Clear();
 		adapter->Fill(data);
@@ -353,7 +377,7 @@ namespace ProjetG10 {
 		conDataBase->Open();
 
 
-		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT TOP 10 [contient].ReferenceArticle,[Article].Nom_Article,SUM([contient].QuantiteArticle) AS Quantite_Vendu FROM Article,contient WHERE [contient].ReferenceArticle = [Article].ReferenceArticle GROUP BY [contient].ReferenceArticle,[Article].Nom_Article ORDER BY SUM([contient].QuantiteArticle) ASC ", conDataBase);
+		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT TOP 10 [Contenir].Reference,[Article].designation,SUM([Contenir].Quantite) AS Quantite_Vendu FROM Article,Contenir WHERE [Contenir].Reference = [Article].Reference GROUP BY [Contenir].Reference,[Article].designation ORDER BY SUM([Contenir].Quantite) ASC ", conDataBase);
 		DataTable^ data = gcnew DataTable();
 		data->Clear();
 		adapter->Fill(data);
@@ -366,17 +390,17 @@ namespace ProjetG10 {
 
 		conDataBase->Open();
 
-		SqlDataAdapter^ adapter = gcnew SqlDataAdapter(" SELECT SUM(Montant_HT * Quantite_Article) - SUM((Montant_HT * 0.2) * Quantite_Article) FROM Article ", conDataBase);
+		SqlDataAdapter^ adapter = gcnew SqlDataAdapter(" SELECT SUM(Montant_HT * Quantite) - SUM((Montant_HT * 0.2) * Quantite) FROM Article ", conDataBase);
 		DataTable^ data = gcnew DataTable();
 		data->Clear();
 		adapter->Fill(data);
 		bindingSource1->DataSource = data;
 		dataGridView1->DataSource = bindingSource1;
 	}
-	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
 		Simulation^ p = gcnew Simulation();
 		p->Show();
-
 	}
-	};
+};
 }

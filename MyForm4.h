@@ -88,9 +88,9 @@ namespace ProjetG10 {
 	private: System::Windows::Forms::TextBox^ textBox9;
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::TextBox^ textBox10;
-	private: System::Windows::Forms::TextBox^ textBox11;
+
 	private: System::Windows::Forms::Label^ label11;
-	private: System::Windows::Forms::Label^ label12;
+
 	private: System::Windows::Forms::TextBox^ textBox12;
 	private: System::Windows::Forms::TextBox^ textBox13;
 
@@ -100,6 +100,7 @@ namespace ProjetG10 {
 	private: System::Windows::Forms::TextBox^ textBox16;
 	private: System::Windows::Forms::TextBox^ textBox17;
 	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::TextBox^ textBox18;
 
 
 
@@ -156,9 +157,7 @@ namespace ProjetG10 {
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
 			this->label11 = (gcnew System::Windows::Forms::Label());
-			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
 			this->button7 = (gcnew System::Windows::Forms::Button());
@@ -167,6 +166,7 @@ namespace ProjetG10 {
 			this->textBox16 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox17 = (gcnew System::Windows::Forms::TextBox());
 			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->textBox18 = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
@@ -393,35 +393,19 @@ namespace ProjetG10 {
 			// 
 			// textBox10
 			// 
-			this->textBox10->Location = System::Drawing::Point(8, 58);
+			this->textBox10->Location = System::Drawing::Point(770, 58);
 			this->textBox10->Name = L"textBox10";
 			this->textBox10->Size = System::Drawing::Size(100, 20);
 			this->textBox10->TabIndex = 30;
 			// 
-			// textBox11
-			// 
-			this->textBox11->Location = System::Drawing::Point(114, 58);
-			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(100, 20);
-			this->textBox11->TabIndex = 31;
-			// 
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(23, 42);
+			this->label11->Location = System::Drawing::Point(791, 42);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(57, 13);
 			this->label11->TabIndex = 32;
 			this->label11->Text = L"Reference";
-			// 
-			// label12
-			// 
-			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(144, 37);
-			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(42, 13);
-			this->label12->TabIndex = 33;
-			this->label12->Text = L"Remise";
 			// 
 			// textBox12
 			// 
@@ -483,12 +467,21 @@ namespace ProjetG10 {
 			this->button6->TabIndex = 42;
 			this->button6->Text = L"Ajouter un autre article";
 			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MyForm4::button6_Click);
+			// 
+			// textBox18
+			// 
+			this->textBox18->Location = System::Drawing::Point(113, 12);
+			this->textBox18->Name = L"textBox18";
+			this->textBox18->Size = System::Drawing::Size(100, 20);
+			this->textBox18->TabIndex = 43;
 			// 
 			// MyForm4
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1061, 551);
+			this->Controls->Add(this->textBox18);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->textBox17);
 			this->Controls->Add(this->textBox16);
@@ -497,9 +490,7 @@ namespace ProjetG10 {
 			this->Controls->Add(this->button7);
 			this->Controls->Add(this->textBox13);
 			this->Controls->Add(this->textBox12);
-			this->Controls->Add(this->label12);
 			this->Controls->Add(this->label11);
-			this->Controls->Add(this->textBox11);
 			this->Controls->Add(this->textBox10);
 			this->Controls->Add(this->label10);
 			this->Controls->Add(this->textBox9);
@@ -540,12 +531,15 @@ namespace ProjetG10 {
 		}
 #pragma endregion
 	private: System::Void MyForm4_Load(System::Object^ sender, System::EventArgs^ e) {
+		textBox10->Hide();
+		label11->Hide();
 		textBox12->Hide();
 		textBox13->Hide();
 		textBox14->Hide();
 		textBox15->Hide();
 		textBox16->Hide();
 		textBox17->Hide();
+		textBox18->Hide();
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -658,6 +652,7 @@ namespace ProjetG10 {
 		textBox15->Text = date_naissance_sansannee;
 		String^ date_achat_sansannee = date2->Substring(5, 5);
 		textBox17->Text = date_achat_sansannee;
+		textBox18->Text = date_emission_sansannee;
 
 		condatabase->Open();
 		
@@ -691,33 +686,41 @@ namespace ProjetG10 {
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
+		SqlConnection^ conDataBase1 = gcnew SqlConnection(constring);
 
-		String^ nom_client = textBox1->Text;
-		String^ prenom_client = textBox2->Text;
-		int quantite = Int32::Parse(textBox3->Text);
-		String^ nom_article = textBox4->Text;
-		String^ date_livraison = Convert::ToDateTime(textBox5->Text).ToString("dd-MM-yyyy");
-		String^ date_emission = Convert::ToDateTime(textBox6->Text).ToString("dd-MM-yyyy");
-		String^ date_paiement = Convert::ToDateTime(textBox7->Text).ToString("dd-MM-yyyy");
-		String^ moyen_paiement = textBox8->Text;
+
 		String^ reference = textBox10->Text;
-		String^ remise = textBox11->Text;
+		String^ nom = textBox1->Text;
+		String^ prenom = textBox2->Text;
+		String^ nom_article = textBox4->Text;
+		String^ date_emission = textBox6->Text;
+		String^ date_livraison = textBox5->Text;
+		String^ date_paiement = textBox7->Text;
+		int quantite = Int32::Parse(textBox3->Text);
+		String^ moyen_paiement = textBox8->Text;
+		String^ date_achat_sansannee = textBox17->Text;
+		String^ date_naissance_sansannee = textBox15->Text;
+		String^ date_emission_sansannee = textBox18->Text;
+		conDataBase->Open();
 
-		SqlCommand^ cmdDataBase = gcnew SqlCommand("UPDATE Commandes SET Date_de_livraison = '" +date_livraison + "', Date_d_emission = '"+date_emission+"', Date_de_paiement = '"+date_paiement+"' WHERE Reference_commande = '" + reference + "'; ", conDataBase);
-		SqlDataReader^ myReader;
-		try {
+		SqlCommand^ cmdDataBase1 = gcnew SqlCommand("UPDATE Contenir SET Reference = (SELECT Reference FROM Article WHERE designation = '" + nom_article + "') , Quantite = '" + quantite + "', Montant_HT = (SELECT ([Article].Montant_HT * '" + quantite + "') FROM Article WHERE designation = '" + nom_article + "'),Montant_TVA = (SELECT ([Article].Montant_TVA * '" + quantite + "') FROM Article WHERE designation = '" + nom_article + "') ,Montant_TTC = (SELECT ([Article].Montant_TTC * '" + quantite + "') FROM Article WHERE designation = '" + nom_article + "') FROM Commandes WHERE [Contenir].Reference_commande = '" + reference + "' AND [Contenir].Reference = (SELECT Reference FROM Article WHERE designation = '" + nom_article + "' )  ", conDataBase);
+		SqlDataReader^ myReader1 = cmdDataBase1->ExecuteReader();
 
-			conDataBase->Open();
-			myReader = cmdDataBase->ExecuteReader();
-			MessageBox::Show("Commande modifié avec succés");
-			conDataBase->Close();
-		}
-		catch (Exception^ ex) {
+		myReader1->Close();
 
-			MessageBox::Show(ex->Message);
 
-		}
+		SqlCommand^ cmdDataBase = gcnew SqlCommand("UPDATE Commandes SET Quantite_article = (SELECT SUM(Quantite) FROM Contenir WHERE [Contenir].Reference_commande = '" + reference + "') , Date_de_livraison = '" + date_livraison + "', Date_d_emission = '" + date_emission + "',Date_de_paiement = '" + date_paiement + "',Moyen_de_paiement = '" + moyen_paiement + "',Montant_total_HT = (SELECT SUM(Montant_HT) FROM Contenir WHERE [Contenir].Reference_commande = '" + reference + "'),Montant_total_TVA = (SELECT SUM(Montant_TVA) FROM Contenir WHERE [Contenir].Reference_commande = '" + reference + "'),Montant_total_TTC = (SELECT SUM(Montant_TTC) FROM Contenir WHERE [Contenir].Reference_commande = '" + reference + "'),Remise_10 = (SELECT Remise_10 FROM Remises, Clients WHERE '" + date_naissance_sansannee + "'= '" + date_emission_sansannee + "' AND [Clients].Nom = '" + nom + "' AND [Clients].Prenom = '" + prenom + "' ),Remise_5 = (SELECT Remise_5 FROM Remises, Clients WHERE '" + date_naissance_sansannee + "'= '" + date_emission_sansannee + "' AND [Clients].Nom = '" + nom + "' AND [Clients].Prenom = '" + prenom + "' ),Numero_client = (SELECT Numero_client FROM Clients WHERE Nom = '" + nom + "' AND Prenom = '" + prenom + "') WHERE [Commandes].Reference_commande = '" + reference + "' ", conDataBase);
+		SqlDataReader^ myReader = cmdDataBase->ExecuteReader();
+		myReader->Close();
+
+
+
+
+		conDataBase->Close();
+		MessageBox::Show("Commande modifié au serveur !");
 	}
+			
+	
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
@@ -764,7 +767,7 @@ namespace ProjetG10 {
 			textBox7->Text = Convert::ToString(myReader->GetDateTime(6).ToString("dd-MM-yyyy"));
 			textBox8->Text = myReader->GetString(7);
 			textBox10->Text = myReader->GetString(0);
-			//textBox11->Text = Convert::ToString(myReader->GetDouble(1));
+
 
 		}
 		myReader->Close();
@@ -801,14 +804,22 @@ namespace ProjetG10 {
 
 		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
-
+		conDataBase->Open();
 
 		String^ reference = textBox9->Text;
-		SqlCommand^ cmdDataBase = gcnew SqlCommand("DELETE FROM Commandes WHERE Reference_commande = '" + reference + "' ", conDataBase);
+		SqlCommand^ cmdDataBase1 = gcnew SqlCommand("DELETE FROM Contenir WHERE Reference_commande = '" + reference + "' ", conDataBase);
+		SqlDataReader^ myReader1 = cmdDataBase1->ExecuteReader();
 
-		conDataBase->Open();
-		SqlDataReader^ myReader = cmdDataBase->ExecuteReader();
-		MessageBox::Show("Commande supprimé avec succés");
+		myReader1->Close();
+		SqlCommand^ cmdDataBase2 = gcnew SqlCommand("DELETE FROM Commandes WHERE Reference_commande = '" + reference + "' ", conDataBase);
+		SqlDataReader^ myReader2 = cmdDataBase2->ExecuteReader();
+
+		myReader2->Close();
+
+		
+
+
+		MessageBox::Show("Commande supprimée avec succés");
 		conDataBase->Close();
 
 	}
@@ -817,6 +828,39 @@ namespace ProjetG10 {
 		retour->Show();
 	}
 
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
+		SqlConnection^ condatabase = gcnew SqlConnection(constring);
+		SqlConnection^ condatabase1 = gcnew SqlConnection(constring);
+
+
+		String^ nom = textBox1->Text;
+		String^ prenom = textBox2->Text;
+		String^ nom_article = textBox4->Text;
+		String^ date_emission = textBox6->Text;
+		String^ date_livraison = textBox5->Text;
+		String^ date_paiement = textBox7->Text;
+		String^ quantite = textBox3->Text;
+		String^ moyen_paiement = textBox8->Text;
+
+		condatabase->Open();
+
+		String^ reference = textBox10->Text;
+
+		SqlCommand^ cmdDataBase = gcnew SqlCommand("INSERT INTO Contenir (Reference_commande, Reference, Quantite, Montant_HT, Montant_TVA, Montant_TTC) VALUES('" + reference + "', (SELECT [Article].Reference FROM Article WHERE designation = '" + nom_article + "' ), '" + quantite + "', (SELECT ([Article].Montant_HT * '" + quantite + "') FROM Article WHERE designation = '" + nom_article + "'),(SELECT ([Article].Montant_TVA * '" + quantite + "') FROM Article WHERE designation = '" + nom_article + "'), (SELECT ([Article].Montant_TTC * '" + quantite + "') FROM Article WHERE designation = '" + nom_article + "') );", condatabase);
+		SqlDataReader^ myReader = cmdDataBase->ExecuteReader();
+
+		myReader->Close();
+		
+		SqlCommand^ cmdDataBase1 = gcnew SqlCommand("UPDATE Commandes SET Quantite_article = (SELECT SUM(Quantite)FROM Contenir WHERE Reference_commande = '" + reference + "'), Montant_total_HT = (SELECT SUM(Montant_HT) FROM Contenir WHERE Reference_commande = '" + reference + "'),Montant_total_TVA = (SELECT SUM(Montant_TVA) FROM Contenir WHERE Reference_commande = '" + reference + "'),Montant_total_TTC = (SELECT SUM(Montant_TTC) FROM Contenir WHERE Reference_commande = '" + reference + "') WHERE Reference_commande = '" + reference + "' ", condatabase);
+		SqlDataReader^ myReader1 = cmdDataBase1->ExecuteReader();
+
+		myReader1->Close();
+
+		condatabase->Close();
+
+		MessageBox::Show("Article ajouté !");
+	}
 };
 }
 

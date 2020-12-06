@@ -52,15 +52,14 @@ namespace NS_Composants
 			}
 			this->READ->Close();
 		}
-		void readPersonnel(System::Windows::Forms::TextBox^ textBox7, System::Windows::Forms::TextBox^ textBox1, System::Windows::Forms::TextBox^ textBox2, System::Windows::Forms::TextBox^ textBox4, System::Windows::Forms::TextBox^ textBox3, System::Windows::Forms::TextBox^ textBox5, System::Windows::Forms::TextBox^ textBox6) {
+		void readPersonnel(System::Windows::Forms::TextBox^ textBox7, System::Windows::Forms::TextBox^ textBox1, System::Windows::Forms::TextBox^ textBox2, System::Windows::Forms::TextBox^ textBox4, System::Windows::Forms::TextBox^ textBox3) {
 			while (this->READ->Read()) {
 				textBox7->Text = System::Convert::ToString(READ->GetInt32(0));
 				textBox1->Text = READ->GetString(1);
 				textBox2->Text = READ->GetString(2);
 				textBox4->Text = READ->GetString(3);
 				textBox3->Text = System::Convert::ToString(READ->GetDateTime(4));
-				textBox5->Text = READ->GetString(1);
-				textBox6->Text = READ->GetString(2);
+
 
 				//textBox8->Text = System::Convert::ToString(READ->GetBoolean(5));
 			}

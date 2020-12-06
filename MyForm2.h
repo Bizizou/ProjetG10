@@ -628,15 +628,15 @@ namespace ProjetG10 {
 			if (textBox5->Text != "" && textBox6->Text != "") {
 				try {
 
-					NS_SVC::gestion_personnel^ personnel = gcnew NS_SVC::gestion_personnel;
+					//NS_SVC::gestion_personnel^ personnel = gcnew NS_SVC::gestion_personnel;
 
-					personnel->modifier(Int32::Parse(textBox7->Text), textBox1->Text, textBox2->Text, textBox4->Text, textBox3->Text);
+					//personnel->modifier(Int32::Parse(textBox7->Text), textBox1->Text, textBox2->Text, textBox4->Text, textBox3->Text);
 					
 
 
-					if (radioButton1->Checked && textBox5->Text != "" && textBox6->Text != "") {
+					if (radioButton1->Checked) {
 						NS_SVC::gestion_personnel^ personnel = gcnew NS_SVC::gestion_personnel;
-						personnel->modifier_encadreur(Int32::Parse(textBox7->Text), textBox1->Text, textBox2->Text, textBox4->Text, textBox3->Text, textBox5->Text, textBox6->Text);
+						personnel->modifier(Int32::Parse(textBox7->Text), textBox1->Text, textBox2->Text, textBox4->Text, textBox3->Text, textBox5->Text, textBox6->Text);
 						
 
 						MessageBox::Show("Personnel modifié :'D");
@@ -656,7 +656,7 @@ namespace ProjetG10 {
 				try {
 					NS_SVC::gestion_personnel^ personnel = gcnew NS_SVC::gestion_personnel;
 
-					personnel->modifier(Int32::Parse(textBox7->Text), textBox1->Text, textBox2->Text, textBox4->Text, textBox3->Text);
+					personnel->modifier(Int32::Parse(textBox7->Text), textBox1->Text, textBox2->Text, textBox4->Text, textBox3->Text, textBox5->Text, textBox6->Text);
 
 					MessageBox::Show("Personnel modifié :'D");
 
@@ -681,8 +681,9 @@ namespace ProjetG10 {
 		if (textBox7->Text != "") {
 			NS_SVC::gestion_personnel^ personnel = gcnew NS_SVC::gestion_personnel;
 
-			personnel->afficherByID(Int32::Parse(textBox7->Text), textBox7, textBox1, textBox2, textBox4, textBox3, textBox5, textBox6, bindingSource2, dataGridView2);
-			
+			personnel->afficherByID(Int32::Parse(textBox7->Text), textBox7, textBox1, textBox2, textBox4, textBox3,bindingSource2, dataGridView2);
+			radioButton2->Checked = true;
+			radioButton1->Checked = false;
 
 			dataGridView1->Hide();
 			dataGridView2->Show();

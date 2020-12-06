@@ -21,20 +21,23 @@ namespace NS_Composants {
 			return "SELECT * FROM Le_personnel WHERE ID = " + this->getID() + " ";
 		}
 		
-		System::String^ SUPPRIMER(void) {
+		System::String^ SUPPRIMERee(void) {
 			return "DELETE FROM Le_personnel WHERE ID = " + this->getID() + " ";
 		}
 		System::String^ AJOUTER(void) {
 			return "INSERT INTO Le_personnel (Nom, Prenom, Adresse, Date_d_embauche) VALUES('" + this->getNom() + "', '" + this->getPrenom() + "', '" + this->getadresse() + "', '" + this->getdateembauche() + "') ";
 		}
 		System::String^ AJOUTER_ENCADREUR(void) {
-			return "INSERT INTO Le_personnel (Nom, Prenom, Adresse, Date_d_embauche, ID_Le_personnel) VALUES('" + this->getNom() + "', '" + this->getPrenom() + "', '" + this->getadresse() + "', '" + this->getdateembauche() + "',(SELECT ID FROM Le_personnel WHERE Nom='" + this->getnom_encadreur() + "' AND Prenom='" + this->getprenom_encadreur() + "')) ";
+			return "UPDATE Le_personnel SET ID_Le_personnel = (SELECT ID FROM Le_personnel WHERE Nom = '" + getnom_encadreur() + "' AND Prenom = '" + getprenom_encadreur() + "' ) WHERE Nom = '"+getNom()+"' AND Prenom = '"+getPrenom()+"' ";
+			//return "INSERT INTO Le_personnel (Nom, Prenom, Adresse, Date_d_embauche, ID_Le_personnel) VALUES('" + this->getNom() + "', '" + this->getPrenom() + "', '" + this->getadresse() + "', '" + this->getdateembauche() + "',(SELECT ID FROM Le_personnel WHERE Nom='" + this->getnom_encadreur() + "' AND Prenom='" + this->getprenom_encadreur() + "')) ";
 		}
 		System::String^ MODIFIER(void) {
-			return "UPDATE Le_personnel SET Nom = '" + this->getNom() + "', Prenom = '" + this->getPrenom() + "', Adresse = '" + this->getadresse() + "' , Date_d_embauche =  '" + this->getdateembauche() + "' WHERE ID = " + this->getID() + " ";
+			return "UPDATE Le_personnel SET Nom = '" + this->getNom() + "', Prenom = '" + this->getPrenom() + "', Adresse = '" + this->getadresse() + "' , Date_d_embauche =  '" + this->getdateembauche() + "', ID_Le_personnel = (SELECT ID FROM Le_personnel WHERE Nom = '"+getnom_encadreur()+"' AND Prenom = '"+getprenom_encadreur()+"' ) WHERE ID = " + this->getID() + " ";
 		}
-		System::String^ MODIFIER_ENCADREUR(void) {
-			return "UPDATE Le_personnel SET ID_Le_personnel = NULL, Nom = '" + this->getNom() + "', Prenom = '" + this->getPrenom() + "', Adresse = '" + this->getadresse() + "' , Date_d_embauche =  '" + this->getdateembauche() + "' WHERE ID_Le_personnel = " + getID() + " DELETE FROM Le_personnel WHERE ID = " + getID() + " ";
+		System::String^ SUPPRIMER(void) {
+
+			return "UPDATE Le_personnel SET ID_Le_personnel = NULL WHERE ID_Le_personnel = " + getID() + " DELETE FROM Le_personnel WHERE ID = " + getID() + " ";
+			
 		}
 		void setID(int sID) {
 			this->ID = sID;

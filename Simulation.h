@@ -236,12 +236,12 @@ namespace ProjetG10 {
 		String^ dI = comboBox3->Text;
 		String^ TVA = textBox1->Text;
 
-		String^ constring = "Data Source=(local);Initial Catalog=poo_projet;Integrated Security=True";
+		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 
 		conDataBase->Open();
 
-		SqlDataAdapter^ adapter = gcnew SqlDataAdapter(" SELECT SUM(Quantite_Article*((Montant_HT+Montant_HT*'" + TVA + "'))-((Montant_HT+Montant_HT*'" + TVA + "')*'" + mC + "')-((Montant_HT+Montant_HT*'" + TVA + "')*'" + rC + "')-((Montant_HT+Montant_HT*'" + TVA + "')*'" + dI + "'))  FROM Article ", conDataBase);
+		SqlDataAdapter^ adapter = gcnew SqlDataAdapter(" SELECT SUM(Quantite*((Montant_HT+Montant_HT*'" + TVA + "'))-((Montant_HT+Montant_HT*'" + TVA + "')*'" + mC + "')-((Montant_HT+Montant_HT*'" + TVA + "')*'" + rC + "')-((Montant_HT+Montant_HT*'" + TVA + "')*'" + dI + "'))  FROM Article ", conDataBase);
 		DataTable^ data = gcnew DataTable();
 		data->Clear();
 		adapter->Fill(data);
