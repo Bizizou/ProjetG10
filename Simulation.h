@@ -49,6 +49,7 @@ namespace ProjetG10 {
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Button^ button1;
+
 	private: System::ComponentModel::IContainer^ components;
 
 	private:
@@ -65,7 +66,6 @@ namespace ProjetG10 {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Simulation::typeid));
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
@@ -84,10 +84,10 @@ namespace ProjetG10 {
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(289, 58);
+			this->dataGridView1->Location = System::Drawing::Point(131, 158);
 			this->dataGridView1->Margin = System::Windows::Forms::Padding(5, 4, 5, 4);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(622, 449);
+			this->dataGridView1->Size = System::Drawing::Size(776, 254);
 			this->dataGridView1->TabIndex = 0;
 			// 
 			// comboBox1
@@ -95,7 +95,7 @@ namespace ProjetG10 {
 			this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"0.05", L"0.1", L"0.15" });
-			this->comboBox1->Location = System::Drawing::Point(151, 111);
+			this->comboBox1->Location = System::Drawing::Point(204, 110);
 			this->comboBox1->Margin = System::Windows::Forms::Padding(5, 4, 5, 4);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(130, 24);
@@ -103,7 +103,7 @@ namespace ProjetG10 {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(555, 30);
+			this->textBox1->Location = System::Drawing::Point(465, 439);
 			this->textBox1->Margin = System::Windows::Forms::Padding(5, 4, 5, 4);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(127, 22);
@@ -115,7 +115,7 @@ namespace ProjetG10 {
 			this->comboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox2->FormattingEnabled = true;
 			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0.05", L"0.06" });
-			this->comboBox2->Location = System::Drawing::Point(151, 268);
+			this->comboBox2->Location = System::Drawing::Point(510, 113);
 			this->comboBox2->Margin = System::Windows::Forms::Padding(5, 4, 5, 4);
 			this->comboBox2->Name = L"comboBox2";
 			this->comboBox2->Size = System::Drawing::Size(130, 24);
@@ -126,7 +126,7 @@ namespace ProjetG10 {
 			this->comboBox3->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox3->FormattingEnabled = true;
 			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"0.02", L"0.03", L"0.05" });
-			this->comboBox3->Location = System::Drawing::Point(151, 438);
+			this->comboBox3->Location = System::Drawing::Point(814, 113);
 			this->comboBox3->Margin = System::Windows::Forms::Padding(5, 4, 5, 4);
 			this->comboBox3->Name = L"comboBox3";
 			this->comboBox3->Size = System::Drawing::Size(130, 24);
@@ -137,7 +137,7 @@ namespace ProjetG10 {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Calibri", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(497, 32);
+			this->label2->Location = System::Drawing::Point(516, 417);
 			this->label2->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(32, 18);
@@ -149,7 +149,7 @@ namespace ProjetG10 {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Calibri", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(13, 114);
+			this->label3->Location = System::Drawing::Point(66, 113);
 			this->label3->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(133, 18);
@@ -161,7 +161,7 @@ namespace ProjetG10 {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Calibri", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(5, 271);
+			this->label4->Location = System::Drawing::Point(364, 116);
 			this->label4->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(139, 18);
@@ -173,7 +173,7 @@ namespace ProjetG10 {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Calibri", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(7, 440);
+			this->label5->Location = System::Drawing::Point(670, 115);
 			this->label5->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(134, 18);
@@ -182,7 +182,7 @@ namespace ProjetG10 {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(929, 265);
+			this->button1->Location = System::Drawing::Point(477, 478);
 			this->button1->Margin = System::Windows::Forms::Padding(5, 4, 5, 4);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(104, 28);
@@ -196,7 +196,7 @@ namespace ProjetG10 {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
-			this->ClientSize = System::Drawing::Size(1037, 520);
+			this->ClientSize = System::Drawing::Size(1057, 547);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
@@ -211,7 +211,6 @@ namespace ProjetG10 {
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
-			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(5, 4, 5, 4);
 			this->Name = L"Simulation";
 			this->Text = L"Simulation";
@@ -248,5 +247,6 @@ namespace ProjetG10 {
 		bindingSource1->DataSource = data;
 		dataGridView1->DataSource = bindingSource1;
 	}
-	};
+
+};
 }

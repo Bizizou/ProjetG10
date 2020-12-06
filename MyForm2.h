@@ -110,10 +110,10 @@ namespace ProjetG10 {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
@@ -169,25 +169,25 @@ namespace ProjetG10 {
 			// 
 			this->dataGridView2->BackgroundColor = System::Drawing::Color::White;
 			this->dataGridView2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle5->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridView2->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView2->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			dataGridViewCellStyle6->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle6->ForeColor = System::Drawing::SystemColors::ControlText;
-			dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->dataGridView2->DefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridView2->DefaultCellStyle = dataGridViewCellStyle2;
 			this->dataGridView2->Location = System::Drawing::Point(144, 100);
 			this->dataGridView2->Name = L"dataGridView2";
 			this->dataGridView2->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToDisplayedHeaders;
@@ -250,7 +250,7 @@ namespace ProjetG10 {
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(469, 509);
+			this->button2->Location = System::Drawing::Point(479, 509);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(99, 30);
 			this->button2->TabIndex = 46;
@@ -262,25 +262,25 @@ namespace ProjetG10 {
 			// 
 			this->dataGridView1->BackgroundColor = System::Drawing::Color::White;
 			this->dataGridView1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			dataGridViewCellStyle7->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle7->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle7->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle7->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			dataGridViewCellStyle8->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle8->ForeColor = System::Drawing::SystemColors::ControlText;
-			dataGridViewCellStyle8->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle8->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle8->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle4;
 			this->dataGridView1->Location = System::Drawing::Point(144, 100);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->Size = System::Drawing::Size(776, 254);
@@ -343,11 +343,11 @@ namespace ProjetG10 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(416, 21);
+			this->label1->Location = System::Drawing::Point(390, 20);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(217, 25);
+			this->label1->Size = System::Drawing::Size(291, 31);
 			this->label1->TabIndex = 38;
 			this->label1->Text = L"Gestion du personnel";
 			// 
@@ -380,7 +380,7 @@ namespace ProjetG10 {
 			this->radioButton1->AutoSize = true;
 			this->radioButton1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->radioButton1->Location = System::Drawing::Point(455, 443);
+			this->radioButton1->Location = System::Drawing::Point(455, 446);
 			this->radioButton1->Name = L"radioButton1";
 			this->radioButton1->Size = System::Drawing::Size(47, 17);
 			this->radioButton1->TabIndex = 60;
@@ -394,7 +394,7 @@ namespace ProjetG10 {
 			this->radioButton2->AutoSize = true;
 			this->radioButton2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->radioButton2->Location = System::Drawing::Point(537, 443);
+			this->radioButton2->Location = System::Drawing::Point(537, 446);
 			this->radioButton2->Name = L"radioButton2";
 			this->radioButton2->Size = System::Drawing::Size(52, 17);
 			this->radioButton2->TabIndex = 61;
@@ -408,7 +408,7 @@ namespace ProjetG10 {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(476, 427);
+			this->label7->Location = System::Drawing::Point(476, 430);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(92, 13);
 			this->label7->TabIndex = 64;
@@ -421,7 +421,7 @@ namespace ProjetG10 {
 			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label9->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label9->Location = System::Drawing::Point(338, 467);
+			this->label9->Location = System::Drawing::Point(358, 467);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(117, 13);
 			this->label9->TabIndex = 65;
@@ -429,7 +429,7 @@ namespace ProjetG10 {
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(321, 483);
+			this->textBox5->Location = System::Drawing::Point(326, 483);
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(153, 20);
 			this->textBox5->TabIndex = 66;
@@ -441,7 +441,7 @@ namespace ProjetG10 {
 			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label10->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label10->Location = System::Drawing::Point(574, 467);
+			this->label10->Location = System::Drawing::Point(579, 467);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(134, 13);
 			this->label10->TabIndex = 67;
@@ -473,7 +473,7 @@ namespace ProjetG10 {
 			// 
 			// textBox6
 			// 
-			this->textBox6->Location = System::Drawing::Point(555, 483);
+			this->textBox6->Location = System::Drawing::Point(569, 483);
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(153, 20);
 			this->textBox6->TabIndex = 73;
@@ -559,10 +559,10 @@ namespace ProjetG10 {
 						NS_SVC::gestion_personnel^ personnel = gcnew NS_SVC::gestion_personnel;
 
 						personnel->ajouter_encadreur(textBox1->Text, textBox2->Text, textBox4->Text, textBox3->Text, textBox5->Text, textBox6->Text);
-						MessageBox::Show("Personnel enregistré :'D");
+						MessageBox::Show("Un personnel a été enregistré avec succès");
 					}
 					else {
-						MessageBox::Show("Veuillez Remplir le Nom et le Prénom du Supérieur hiérarchique");
+						MessageBox::Show("Veuillez remplir le nom et le prénom du supérieur hiérarchique");
 					}
 				}
 				catch (Exception^ ex) {
@@ -579,7 +579,7 @@ namespace ProjetG10 {
 
 					personnel->ajouter(textBox1->Text, textBox2->Text, textBox4->Text, textBox3->Text);
 
-					MessageBox::Show("Personnel enregistré :'D");
+					MessageBox::Show("Un personnel a été enregistré avec succès");
 				}
 				catch (Exception^ ex) {
 
@@ -639,10 +639,10 @@ namespace ProjetG10 {
 						personnel->modifier(Int32::Parse(textBox7->Text), textBox1->Text, textBox2->Text, textBox4->Text, textBox3->Text, textBox5->Text, textBox6->Text);
 						
 
-						MessageBox::Show("Personnel modifié :'D");
+						MessageBox::Show("Un personnel a été modifié avec succès");
 					}
 					else {
-						MessageBox::Show("Veuillez Remplir le Nom et le Prénom du Suppérieur hiérarchique");
+						MessageBox::Show("Veuillez remplir le nom et le prénom du supérieur hiérarchique");
 					}
 				}
 				catch (Exception^ ex) {
@@ -658,7 +658,7 @@ namespace ProjetG10 {
 
 					personnel->modifier(Int32::Parse(textBox7->Text), textBox1->Text, textBox2->Text, textBox4->Text, textBox3->Text, textBox5->Text, textBox6->Text);
 
-					MessageBox::Show("Personnel modifié :'D");
+					MessageBox::Show("Un personnel a été modifié avec succès");
 
 				}
 				catch (Exception^ ex) {
@@ -692,28 +692,28 @@ namespace ProjetG10 {
 		}
 		
 		else {
-			MessageBox::Show("Veuillez entrez l'ID d'un Personnel");
+			MessageBox::Show("Veuillez entrez l'ID d'un personnel");
 		}
 	}
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 
 
 
-		String^ constring = "Data Source=(local);Initial Catalog=POO;Integrated Security=True";
+		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 
 		if (textBox7->Text != "") {
 			int ID = Int32::Parse(textBox7->Text);
-			if (MessageBox::Show("Etes-vous sûr de vouloir supprimer le personnel avec l'id " + ID + " ?", "Warning", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == System::Windows::Forms::DialogResult::Yes) {
+			if (MessageBox::Show("Etes-vous sûr de vouloir supprimer le personnel avec l'ID " + ID + " ?", "Warning", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == System::Windows::Forms::DialogResult::Yes) {
 
 				NS_SVC::gestion_personnel^ Personnel = gcnew NS_SVC::gestion_personnel;
 
 				Personnel->supprimer(Int32::Parse(textBox7->Text));
 
-				MessageBox::Show("Personnel supprimé :'D");
+				MessageBox::Show("Un personnel a été supprimé avec succès");
 			}
 			else {
-				MessageBox::Show("Personnel non supprimé");
+				MessageBox::Show("Le personnel n'a pas été supprimé");
 			}
 		}
 		else {

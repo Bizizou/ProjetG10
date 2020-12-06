@@ -171,16 +171,18 @@ namespace ProjetG10 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(440, 22);
+			this->label1->Location = System::Drawing::Point(405, 21);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(195, 25);
+			this->label1->Size = System::Drawing::Size(263, 31);
 			this->label1->TabIndex = 4;
 			this->label1->Text = L"Gestion des clients";
 			// 
 			// button1
 			// 
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->button1->Location = System::Drawing::Point(24, 100);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(99, 30);
@@ -192,52 +194,52 @@ namespace ProjetG10 {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->BackColor = System::Drawing::SystemColors::Info;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label3->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label3->Location = System::Drawing::Point(153, 407);
+			this->label3->Location = System::Drawing::Point(172, 410);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(34, 15);
+			this->label3->Size = System::Drawing::Size(32, 13);
 			this->label3->TabIndex = 8;
 			this->label3->Text = L"Nom";
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->BackColor = System::Drawing::SystemColors::Info;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label4->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label4->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label4->Location = System::Drawing::Point(846, 406);
+			this->label4->Location = System::Drawing::Point(812, 410);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(129, 15);
+			this->label4->Size = System::Drawing::Size(133, 13);
 			this->label4->TabIndex = 10;
 			this->label4->Text = L"Date du premier achat";
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->BackColor = System::Drawing::SystemColors::Info;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label5->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label5->Location = System::Drawing::Point(698, 407);
+			this->label5->Location = System::Drawing::Point(685, 410);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(103, 15);
+			this->label5->Size = System::Drawing::Size(107, 13);
 			this->label5->TabIndex = 12;
 			this->label5->Text = L"Adresse Livraison";
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->BackColor = System::Drawing::SystemColors::Info;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label6->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label6->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label6->Location = System::Drawing::Point(533, 407);
+			this->label6->Location = System::Drawing::Point(522, 409);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(135, 15);
+			this->label6->Size = System::Drawing::Size(142, 13);
 			this->label6->TabIndex = 14;
 			this->label6->Text = L"Adresse de Facturation ";
 			this->label6->Click += gcnew System::EventHandler(this, &MyForm1::label6_Click);
@@ -245,26 +247,26 @@ namespace ProjetG10 {
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->BackColor = System::Drawing::SystemColors::Info;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label7->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label7->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label7->Location = System::Drawing::Point(355, 407);
+			this->label7->Location = System::Drawing::Point(389, 409);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(114, 15);
+			this->label7->Size = System::Drawing::Size(119, 13);
 			this->label7->TabIndex = 16;
 			this->label7->Text = L"Date de Naissance ";
 			// 
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->BackColor = System::Drawing::SystemColors::Info;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->label8->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label8->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label8->Location = System::Drawing::Point(240, 407);
+			this->label8->Location = System::Drawing::Point(289, 409);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(51, 15);
+			this->label8->Size = System::Drawing::Size(49, 13);
 			this->label8->TabIndex = 18;
 			this->label8->Text = L"Prenom";
 			// 
@@ -280,7 +282,9 @@ namespace ProjetG10 {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(10, 324);
+			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button2->Location = System::Drawing::Point(24, 324);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(99, 30);
 			this->button2->TabIndex = 24;
@@ -290,7 +294,9 @@ namespace ProjetG10 {
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(926, 324);
+			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button3->Location = System::Drawing::Point(940, 324);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(99, 30);
 			this->button3->TabIndex = 25;
@@ -300,7 +306,9 @@ namespace ProjetG10 {
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(926, 100);
+			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button4->Location = System::Drawing::Point(940, 100);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(99, 30);
 			this->button4->TabIndex = 26;
@@ -310,44 +318,44 @@ namespace ProjetG10 {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(940, 76);
+			this->textBox1->Location = System::Drawing::Point(945, 74);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(86, 20);
 			this->textBox1->TabIndex = 27;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(114, 424);
+			this->textBox2->Location = System::Drawing::Point(126, 425);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(101, 20);
+			this->textBox2->Size = System::Drawing::Size(116, 20);
 			this->textBox2->TabIndex = 28;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(220, 425);
+			this->textBox3->Location = System::Drawing::Point(257, 425);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(97, 20);
+			this->textBox3->Size = System::Drawing::Size(116, 20);
 			this->textBox3->TabIndex = 29;
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(322, 424);
+			this->textBox4->Location = System::Drawing::Point(379, 425);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(161, 20);
+			this->textBox4->Size = System::Drawing::Size(133, 20);
 			this->textBox4->TabIndex = 30;
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(832, 425);
+			this->textBox5->Location = System::Drawing::Point(807, 425);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(142, 20);
+			this->textBox5->Size = System::Drawing::Size(145, 20);
 			this->textBox5->TabIndex = 31;
 			// 
 			// textBox6
 			// 
-			this->textBox6->Location = System::Drawing::Point(516, 424);
+			this->textBox6->Location = System::Drawing::Point(518, 425);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(142, 20);
+			this->textBox6->Size = System::Drawing::Size(150, 20);
 			this->textBox6->TabIndex = 32;
 			// 
 			// dataGridView2
@@ -363,25 +371,29 @@ namespace ProjetG10 {
 			// 
 			// textBox7
 			// 
-			this->textBox7->Location = System::Drawing::Point(672, 424);
+			this->textBox7->Location = System::Drawing::Point(674, 425);
 			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(141, 20);
+			this->textBox7->Size = System::Drawing::Size(127, 20);
 			this->textBox7->TabIndex = 34;
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(965, 55);
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(961, 58);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(50, 13);
+			this->label2->Size = System::Drawing::Size(59, 13);
 			this->label2->TabIndex = 35;
 			this->label2->Text = L"ID_Client";
 			// 
 			// button5
 			// 
-			this->button5->Location = System::Drawing::Point(466, 71);
+			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button5->Location = System::Drawing::Point(461, 71);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(132, 23);
+			this->button5->Size = System::Drawing::Size(154, 23);
 			this->button5->TabIndex = 36;
 			this->button5->Text = L"Afficher tous les clients ";
 			this->button5->UseVisualStyleBackColor = true;
@@ -389,16 +401,20 @@ namespace ProjetG10 {
 			// 
 			// button6
 			// 
-			this->button6->Location = System::Drawing::Point(476, 505);
+			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button6->Location = System::Drawing::Point(496, 504);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(75, 23);
+			this->button6->Size = System::Drawing::Size(88, 23);
 			this->button6->TabIndex = 37;
-			this->button6->Text = L"clear all";
+			this->button6->Text = L"Tout effacer";
 			this->button6->UseVisualStyleBackColor = true;
 			this->button6->Click += gcnew System::EventHandler(this, &MyForm1::button6_Click);
 			// 
 			// button7
 			// 
+			this->button7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->button7->Location = System::Drawing::Point(985, 525);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(75, 23);
@@ -411,6 +427,7 @@ namespace ProjetG10 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::Color::Lavender;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1061, 551);
 			this->Controls->Add(this->button7);
@@ -536,7 +553,7 @@ namespace ProjetG10 {
 						NS_SVC::Gestion_Client^ client = gcnew NS_SVC::Gestion_Client;
 
 						client->modifier(Int32::Parse(textBox1->Text), textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, adresseFac, adresseLiv);
-						MessageBox::Show("Client modifié :'D");
+						MessageBox::Show("Le client a été modifié avec succès");
 						conDataBase->Close();
 					}
 					catch (Exception^ ex) {
@@ -554,7 +571,7 @@ namespace ProjetG10 {
 			}
 		}
 		else {
-			MessageBox::Show("Il faut remplir tout les champs");
+			MessageBox::Show("Il faut remplir tous les champs");
 		}
 	}
 
@@ -566,10 +583,10 @@ namespace ProjetG10 {
 			NS_SVC::Gestion_Client^ client = gcnew NS_SVC::Gestion_Client;
 
 			client->supprimer(Int32::Parse(textBox1->Text));
-			MessageBox::Show("Client supprimé :'D");
+			MessageBox::Show("Un client a été supprimé avec succès");
 		}
 		else {
-			MessageBox::Show("Il faut remplir l'ID d'un Client");
+			MessageBox::Show("Il faut remplir l'ID d'un client");
 		}
 	}
 
@@ -599,7 +616,7 @@ namespace ProjetG10 {
 			dataGridView2->Show();
 		}
 		else {
-			MessageBox::Show("Vous devez introduire l'ID ou le Nom ou le Prénom d'un Client");
+			MessageBox::Show("Vous devez introduire l'ID d'un client");
 		}
 
 	}
