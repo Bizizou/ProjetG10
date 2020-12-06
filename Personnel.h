@@ -20,10 +20,6 @@ namespace NS_Composants {
 		System::String^ AFFICHERbyID(void) {
 			return "SELECT * FROM Le_personnel WHERE ID = " + this->getID() + " ";
 		}
-		
-		System::String^ SUPPRIMERee(void) {
-			return "DELETE FROM Le_personnel WHERE ID = " + this->getID() + " ";
-		}
 		System::String^ AJOUTER(void) {
 			return "INSERT INTO Le_personnel (Nom, Prenom, Adresse, Date_d_embauche) VALUES('" + this->getNom() + "', '" + this->getPrenom() + "', '" + this->getadresse() + "', '" + this->getdateembauche() + "') ";
 		}
