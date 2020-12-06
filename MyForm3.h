@@ -453,11 +453,11 @@ namespace ProjetG10 {
 			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label11->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label11->Location = System::Drawing::Point(948, 54);
+			this->label11->Location = System::Drawing::Point(947, 54);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(78, 17);
+			this->label11->Size = System::Drawing::Size(83, 17);
 			this->label11->TabIndex = 65;
-			this->label11->Text = L"ID_Article";
+			this->label11->Text = L"Reference";
 			// 
 			// MyForm3
 			// 
@@ -557,10 +557,10 @@ namespace ProjetG10 {
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ reference = textBox1->Text;
-		String^ ID = textBox10->Text;
+		String^ Ref = textBox10->Text;
 		String^ constring = "Data Source=(local);Initial Catalog=GROUPE10BDD;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
-		SqlCommand^ cmdDataBase = gcnew SqlCommand("SELECT * FROM Article WHERE ID_Article = '"+ID+"' ", conDataBase);
+		SqlCommand^ cmdDataBase = gcnew SqlCommand("SELECT * FROM Article WHERE Reference = '"+Ref+"' ", conDataBase);
 		conDataBase->Open();
 		SqlDataReader^ myReader = cmdDataBase->ExecuteReader();
 
@@ -568,19 +568,19 @@ namespace ProjetG10 {
 		dataGridView2->Show();
 
 		while (myReader->Read()) {
-			textBox1->Text = myReader->GetString(1);
-			textBox2->Text = myReader->GetString(2);
-			textBox3->Text = Convert::ToString(myReader->GetInt32(3));
-			textBox4->Text = Convert::ToString(myReader->GetDouble(4));
-			textBox5->Text = Convert::ToString(myReader->GetDouble(5));
-			textBox6->Text = Convert::ToString(myReader->GetDouble(6));
-			textBox7->Text = myReader->GetString(7);
-			textBox8->Text = myReader->GetString(8);
-			textBox9->Text = myReader->GetString(9);
+			textBox1->Text = myReader->GetString(0);
+			textBox2->Text = myReader->GetString(1);
+			textBox3->Text = Convert::ToString(myReader->GetInt32(2));
+			textBox4->Text = Convert::ToString(myReader->GetDouble(3));
+			textBox5->Text = Convert::ToString(myReader->GetDouble(4));
+			textBox6->Text = Convert::ToString(myReader->GetDouble(5));
+			textBox7->Text = myReader->GetString(6);
+			textBox8->Text = myReader->GetString(7);
+			textBox9->Text = myReader->GetString(8);
 		}
 
 		myReader->Close();
-		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT * FROM Article WHERE ID_Article = '" + ID + "' ", conDataBase);
+		SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT * FROM Article WHERE Reference = '" + Ref + "' ", conDataBase);
 		DataTable^ data = gcnew DataTable();
 		data->Clear();
 		adapter->Fill(data);
@@ -603,7 +603,7 @@ namespace ProjetG10 {
 		int seuil = Int32::Parse(textBox9->Text);
 		String^ ID = textBox10->Text;
 
-		SqlCommand^ cmdDataBase = gcnew SqlCommand("UPDATE Article SET Reference = '"+ reference +"' ,designation = '" + designation + "',  Quantite = " + quantite + ", Montant_HT = " + montant_ht + ", Montant_TVA = " + montant_tva + ", Montant_TTC = " + montant_ttc + ", Seuil_de_reapprovisionnement = " + seuil + ", Nature_de_l_article = '" + nature_article + "', Couleur_de_l_article = '" + couleur_article + "' WHERE ID_Article = '" + ID + "' ", conDataBase);
+		SqlCommand^ cmdDataBase = gcnew SqlCommand("UPDATE Article SET Reference = '"+ reference +"' ,designation = '" + designation + "',  Quantite = " + quantite + ", Montant_HT = " + montant_ht + ", Montant_TVA = " + montant_tva + ", Montant_TTC = " + montant_ttc + ", Seuil_de_reapprovisionnement = " + seuil + ", Nature_de_l_article = '" + nature_article + "', Couleur_de_l_article = '" + couleur_article + "' WHERE Reference = '" + ID + "' ", conDataBase);
 		SqlDataReader^ myReader;
 		try {
 
@@ -625,7 +625,7 @@ namespace ProjetG10 {
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 
 
-		String^ reference = textBox1->Text;
+		String^ reference = textBox10->Text;
 		SqlCommand^ cmdDataBase = gcnew SqlCommand("DELETE FROM Article WHERE Reference = '" + reference + "' ", conDataBase);
 
 		conDataBase->Open();

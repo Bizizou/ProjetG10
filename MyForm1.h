@@ -86,6 +86,8 @@ namespace ProjetG10 {
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Button^ button7;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::Label^ label10;
 
 
 
@@ -162,6 +164,8 @@ namespace ProjetG10 {
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
@@ -211,7 +215,7 @@ namespace ProjetG10 {
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label4->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label4->Location = System::Drawing::Point(812, 410);
+			this->label4->Location = System::Drawing::Point(812, 393);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(133, 13);
 			this->label4->TabIndex = 10;
@@ -251,7 +255,7 @@ namespace ProjetG10 {
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label7->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label7->Location = System::Drawing::Point(389, 409);
+			this->label7->Location = System::Drawing::Point(389, 391);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(119, 13);
 			this->label7->TabIndex = 16;
@@ -423,6 +427,32 @@ namespace ProjetG10 {
 			this->button7->UseVisualStyleBackColor = true;
 			this->button7->Click += gcnew System::EventHandler(this, &MyForm1::button7_Click_1);
 			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label9->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
+			this->label9->Location = System::Drawing::Point(376, 408);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(138, 13);
+			this->label9->TabIndex = 39;
+			this->label9->Text = L"(au format MM-dd-yyyy)";
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label10->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
+			this->label10->Location = System::Drawing::Point(810, 410);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(138, 13);
+			this->label10->TabIndex = 40;
+			this->label10->Text = L"(au format MM-dd-yyyy)";
+			// 
 			// MyForm1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -430,6 +460,8 @@ namespace ProjetG10 {
 			this->BackColor = System::Drawing::Color::Lavender;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1061, 551);
+			this->Controls->Add(this->label10);
+			this->Controls->Add(this->label9);
 			this->Controls->Add(this->button7);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button5);
@@ -503,7 +535,7 @@ namespace ProjetG10 {
 						client->ajouter(textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, adresseFac, adresseLiv);
 
 
-						MessageBox::Show("Client enregistré :'D");
+						MessageBox::Show("Un client a été enregistré avec succès");
 					}
 					catch (Exception^ ex) {
 
